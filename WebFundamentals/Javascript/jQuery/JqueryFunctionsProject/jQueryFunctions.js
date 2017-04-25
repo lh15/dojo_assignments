@@ -26,7 +26,7 @@ $( "#changeBackground" )
 
    $( "#logo" )
   .click(function() {
-    window.location = 'file:///Users/Leibel/Desktop/DojoAssignments/WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html';
+    window.location = 'file:///Users/Leibel/Desktop/dojo_assignments/WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html';
   });
 
   $( "#whyRun" )
