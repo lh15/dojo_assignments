@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    
+}
+#wrapper{
+    padding: 10px;
+    width: 600px;
+    height: 600px;
+    background: #8EBAFF;
+    margin: 50px auto;
+    box-shadow: -5px -4px 109px -9px rgba(0,0,0,0.6);
+    text-align: center;
+    
+}
+.box{
+    box-shadow: 30px 26px 87px -21px rgba(0,0,0,0.6);
+    width: 125px;
+    height: 100px;
+    background: #c55582;
+    display: inline-block;
+    margin: 1.5%;
+    text-align: center;
+    
+}
+p{
+   /*margin-top: 40px; */
+   display: inline-block;
+   /*line-height: 100px;*/
+   background: gray;
+
+   
+}
+
+.toggleColor{
+    background-color: orange;
+}

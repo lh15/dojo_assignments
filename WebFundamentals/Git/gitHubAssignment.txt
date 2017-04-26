@@ -1,0 +1,850 @@
+Last login: Sun Apr 23 01:35:00 on ttys000
+Leibels-MacBook-Pro:Javascript Leibel$  defaults write com.apple.finder AppleShowAllFiles YES.
+Leibels-MacBook-Pro:Javascript Leibel$ defaults write com.apple.finder AppleShowAllFiles NO
+Leibels-MacBook-Pro:Javascript Leibel$ cd ..
+Leibels-MacBook-Pro:WebFundamentals Leibel$ cd ..
+Leibels-MacBook-Pro:DojoAssignments Leibel$ cd ..
+Leibels-MacBook-Pro:Desktop Leibel$ defaults write com.apple.finder AppleShowAllFiles YES.
+Leibels-MacBook-Pro:Desktop Leibel$ find /Users/username -name ".git" -print
+find: /Users/username: No such file or directory
+Leibels-MacBook-Pro:Desktop Leibel$ find -name ".git" 
+find: illegal option -- n
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+Leibels-MacBook-Pro:Desktop Leibel$ git log
+fatal: Not a git repository (or any of the parent directories): .git
+Leibels-MacBook-Pro:Desktop Leibel$ cd DojoAssignments/
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git init
+Initialized empty Git repository in /Users/Leibel/Desktop/DojoAssignments/.git/
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git add . 
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git commit -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git commit -m "commited dojoAssignments from beginning of program until apr 25"
+[master (root-commit) bac5f8c] commited dojoAssignments from beginning of program until apr 25
+ 94 files changed, 1597 insertions(+)
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/ad_background.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/client_server.jpg
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/globe.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/home.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/html.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/ninja.png
+ create mode 100755 WebFundamentals/CSS/Internet Css Project/images/phone.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/www-wordstream.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/internet.css
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/internet.html
+ create mode 100644 WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.css
+ create mode 100644 WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.html
+ create mode 100644 WebFundamentals/CSS/Plotting Blocks/index.html
+ create mode 100644 WebFundamentals/CSS/Plotting Blocks/styles.css
+ create mode 100644 WebFundamentals/CSS/Portfolio Css Project/Portfolio.css
+ create mode 100644 WebFundamentals/CSS/Portfolio Css Project/Portfolio.html
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/CSS.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/HTML.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/JavaScript.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/LAMP.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/MEAN.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/RUBY.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/ajax.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/angular.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/bootstrap.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/c-sharp.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codeigniter.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codepen.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/d3.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/django.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/expressjs.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/familycontacts.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/fiveEleven.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/github.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/iOS-Swift.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/jQuery.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/lamode.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/linkedin.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/materialize.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mongodb.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mysql.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/nodejs.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/photo_of_me.jpg
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/php.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/portfolio_assignment.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/python.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/socket.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/sqlite.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/twitter.png
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 160000 WebFundamentals/Git/gittest
+ create mode 100644 WebFundamentals/Git/test/commands.txt
+ create mode 100644 WebFundamentals/Git/test/index.html
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/fakeBlog.html
+ create mode 100644 WebFundamentals/HTML/formExcercise.html
+ create mode 100644 WebFundamentals/HTML/hello_world.html
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/HTML/index.html
+ create mode 100644 WebFundamentals/HTML/pariprigrammMon.html
+ create mode 100644 WebFundamentals/Javascript/StudentsInstructors.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/Javascript/bdayCountdown.html
+ create mode 100644 WebFundamentals/Javascript/declare.js
+ create mode 100644 WebFundamentals/Javascript/fancyArr.js
+ create mode 100644 WebFundamentals/Javascript/fewBillion.js
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/credit-card.png
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.css
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.js
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/running.png
+ create mode 100644 WebFundamentals/Javascript/numbersOnly.js
+ create mode 100644 WebFundamentals/Javascript/printRange.js
+ create mode 100644 WebFundamentals/Javascript/randomChance.js
+ create mode 100644 WebFundamentals/Javascript/timeAssignment.js
+ create mode 100644 WebFundamentals/WebFunBeltExam/WebFunBelt.css
+ create mode 100644 WebFundamentals/WebFunBeltExam/WebFunBelt.html
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon1.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon2.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon3.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon4.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/main_img.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/read_me.txt
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/recycle.png
+ create mode 100644 WebFundamentals/WebFunBeltExam/option-e.png
+ create mode 100644 WebFundamentals/WebFunBeltExam/reqs
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 assignments.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git log
+commit bac5f8cb11f8940120b9a397d91981a11a4aac1d
+Author: Leibelhecht <leibelhecht@gmail.com>
+Date:   Tue Apr 25 17:59:29 2017 -0500
+
+    commited dojoAssignments from beginning of program until apr 25
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git remote add origin https://github.com/lh15/dojo_assignments.git
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git push -u origin master
+Username for 'https://github.com': lh15
+Password for 'https://lh15@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/lh15/dojo_assignments.git/'
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git remote add origin https://github.com/lh15/dojo_assignments.git
+fatal: remote origin already exists.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git push -u origin master
+Username for 'https://github.com': lh15
+Password for 'https://lh15@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/lh15/dojo_assignments.git/'
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git remote add origin https://github.com/lh15/dojo_assignments.git
+fatal: remote origin already exists.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git push -u origin master
+Username for 'https://github.com': lh15
+Password for 'https://lh15@github.com': 
+To https://github.com/lh15/dojo_assignments.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/lh15/dojo_assignments.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git remote add origin https://github.com/lh15/dojo_assignments.git
+fatal: remote origin already exists.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git push -u origin master
+To https://github.com/lh15/dojo_assignments.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/lh15/dojo_assignments.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git pull ...
+fatal: '...' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git pull dojo_assignments
+fatal: 'dojo_assignments' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ git clone https://github.com/lh15/dojo_assignments.git
+Cloning into 'dojo_assignments'...
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+Leibels-MacBook-Pro:DojoAssignments Leibel$ cd dojo_assignments/
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   MEAN/about.txt
+	new file:   Python/about.txt
+	new file:   Ruby/about.txt
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ad_background.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/client_server.jpg
+	new file:   WebFundamentals/CSS/Internet Css Project/images/globe.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/home.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/html.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ninja.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/phone.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/www-wordstream.png
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.css
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.html
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.css
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/index.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/styles.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.html
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/CSS.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/HTML.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/JavaScript.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/LAMP.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/MEAN.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/RUBY.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/ajax.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/angular.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/bootstrap.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/c-sharp.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codeigniter.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codepen.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/d3.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/django.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/expressjs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/familycontacts.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/fiveEleven.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/github.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/iOS-Swift.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/jQuery.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/lamode.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/linkedin.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/materialize.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mongodb.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mysql.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/nodejs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/photo_of_me.jpg
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/php.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/portfolio_assignment.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/python.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/socket.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/sqlite.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/twitter.png
+	new file:   WebFundamentals/CSS/about.txt
+	new file:   WebFundamentals/Git/about.txt
+	new file:   WebFundamentals/Git/gittest
+	new file:   WebFundamentals/Git/test/commands.txt
+	new file:   WebFundamentals/Git/test/index.html
+	new file:   WebFundamentals/HTML/about.txt
+	new file:   WebFundamentals/HTML/fakeBlog.html
+	new file:   WebFundamentals/HTML/formExcercise.html
+	new file:   WebFundamentals/HTML/hello_world.html
+	new file:   WebFundamentals/HTML/indentation.html
+	new file:   WebFundamentals/HTML/index.html
+	new file:   WebFundamentals/HTML/pariprigrammMon.html
+	new file:   WebFundamentals/Javascript/StudentsInstructors.html
+	new file:   WebFundamentals/Javascript/about.txt
+	new file:   WebFundamentals/Javascript/bdayCountdown.html
+	new file:   WebFundamentals/Javascript/declare.js
+	new file:   WebFundamentals/Javascript/fancyArr.js
+	new file:   WebFundamentals/Javascript/fewBillion.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/credit-card.png
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.css
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/running.png
+	new file:   WebFundamentals/Javascript/numbersOnly.js
+	new file:   WebFundamentals/Javascript/printRange.js
+	new file:   WebFundamentals/Javascript/randomChance.js
+	new file:   WebFundamentals/Javascript/timeAssignment.js
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.css
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.html
+	new file:   WebFundamentals/WebFunBeltExam/images/icon1.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon2.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon3.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon4.png
+	new file:   WebFundamentals/WebFunBeltExam/images/main_img.png
+	new file:   WebFundamentals/WebFunBeltExam/images/read_me.txt
+	new file:   WebFundamentals/WebFunBeltExam/images/recycle.png
+	new file:   WebFundamentals/WebFunBeltExam/option-e.png
+	new file:   WebFundamentals/WebFunBeltExam/reqs
+	new file:   WebFundamentals/about.txt
+	new file:   assignments.txt
+	new file:   iOS/about.txt
+	new file:   netCore/about.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+	modified:   WebFundamentals/Git/gittest (untracked content)
+
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   MEAN/about.txt
+	new file:   Python/about.txt
+	new file:   Ruby/about.txt
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ad_background.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/client_server.jpg
+	new file:   WebFundamentals/CSS/Internet Css Project/images/globe.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/home.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/html.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ninja.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/phone.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/www-wordstream.png
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.css
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.html
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.css
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/index.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/styles.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.html
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/CSS.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/HTML.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/JavaScript.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/LAMP.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/MEAN.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/RUBY.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/ajax.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/angular.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/bootstrap.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/c-sharp.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codeigniter.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codepen.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/d3.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/django.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/expressjs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/familycontacts.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/fiveEleven.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/github.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/iOS-Swift.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/jQuery.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/lamode.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/linkedin.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/materialize.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mongodb.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mysql.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/nodejs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/photo_of_me.jpg
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/php.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/portfolio_assignment.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/python.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/socket.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/sqlite.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/twitter.png
+	new file:   WebFundamentals/CSS/about.txt
+	new file:   WebFundamentals/Git/about.txt
+	new file:   WebFundamentals/Git/gittest
+	new file:   WebFundamentals/Git/test/commands.txt
+	new file:   WebFundamentals/Git/test/index.html
+	new file:   WebFundamentals/HTML/about.txt
+	new file:   WebFundamentals/HTML/fakeBlog.html
+	new file:   WebFundamentals/HTML/formExcercise.html
+	new file:   WebFundamentals/HTML/hello_world.html
+	new file:   WebFundamentals/HTML/indentation.html
+	new file:   WebFundamentals/HTML/index.html
+	new file:   WebFundamentals/HTML/pariprigrammMon.html
+	new file:   WebFundamentals/Javascript/StudentsInstructors.html
+	new file:   WebFundamentals/Javascript/about.txt
+	new file:   WebFundamentals/Javascript/bdayCountdown.html
+	new file:   WebFundamentals/Javascript/declare.js
+	new file:   WebFundamentals/Javascript/fancyArr.js
+	new file:   WebFundamentals/Javascript/fewBillion.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/credit-card.png
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.css
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/running.png
+	new file:   WebFundamentals/Javascript/numbersOnly.js
+	new file:   WebFundamentals/Javascript/printRange.js
+	new file:   WebFundamentals/Javascript/randomChance.js
+	new file:   WebFundamentals/Javascript/timeAssignment.js
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.css
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.html
+	new file:   WebFundamentals/WebFunBeltExam/images/icon1.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon2.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon3.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon4.png
+	new file:   WebFundamentals/WebFunBeltExam/images/main_img.png
+	new file:   WebFundamentals/WebFunBeltExam/images/read_me.txt
+	new file:   WebFundamentals/WebFunBeltExam/images/recycle.png
+	new file:   WebFundamentals/WebFunBeltExam/option-e.png
+	new file:   WebFundamentals/WebFunBeltExam/reqs
+	new file:   WebFundamentals/about.txt
+	new file:   assignments.txt
+	new file:   iOS/about.txt
+	new file:   netCore/about.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+	modified:   WebFundamentals/Git/gittest (untracked content)
+
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   MEAN/about.txt
+	new file:   Python/about.txt
+	new file:   Ruby/about.txt
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ad_background.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/client_server.jpg
+	new file:   WebFundamentals/CSS/Internet Css Project/images/globe.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/home.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/html.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ninja.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/phone.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/www-wordstream.png
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.css
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.html
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.css
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/index.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/styles.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.html
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/CSS.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/HTML.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/JavaScript.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/LAMP.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/MEAN.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/RUBY.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/ajax.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/angular.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/bootstrap.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/c-sharp.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codeigniter.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codepen.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/d3.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/django.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/expressjs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/familycontacts.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/fiveEleven.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/github.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/iOS-Swift.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/jQuery.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/lamode.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/linkedin.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/materialize.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mongodb.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mysql.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/nodejs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/photo_of_me.jpg
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/php.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/portfolio_assignment.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/python.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/socket.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/sqlite.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/twitter.png
+	new file:   WebFundamentals/CSS/about.txt
+	new file:   WebFundamentals/Git/about.txt
+	new file:   WebFundamentals/Git/gittest
+	new file:   WebFundamentals/Git/test/commands.txt
+	new file:   WebFundamentals/Git/test/index.html
+	new file:   WebFundamentals/HTML/about.txt
+	new file:   WebFundamentals/HTML/fakeBlog.html
+	new file:   WebFundamentals/HTML/formExcercise.html
+	new file:   WebFundamentals/HTML/hello_world.html
+	new file:   WebFundamentals/HTML/indentation.html
+	new file:   WebFundamentals/HTML/index.html
+	new file:   WebFundamentals/HTML/pariprigrammMon.html
+	new file:   WebFundamentals/Javascript/StudentsInstructors.html
+	new file:   WebFundamentals/Javascript/about.txt
+	new file:   WebFundamentals/Javascript/bdayCountdown.html
+	new file:   WebFundamentals/Javascript/declare.js
+	new file:   WebFundamentals/Javascript/fancyArr.js
+	new file:   WebFundamentals/Javascript/fewBillion.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/credit-card.png
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.css
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/running.png
+	new file:   WebFundamentals/Javascript/numbersOnly.js
+	new file:   WebFundamentals/Javascript/printRange.js
+	new file:   WebFundamentals/Javascript/randomChance.js
+	new file:   WebFundamentals/Javascript/timeAssignment.js
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.css
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.html
+	new file:   WebFundamentals/WebFunBeltExam/images/icon1.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon2.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon3.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon4.png
+	new file:   WebFundamentals/WebFunBeltExam/images/main_img.png
+	new file:   WebFundamentals/WebFunBeltExam/images/read_me.txt
+	new file:   WebFundamentals/WebFunBeltExam/images/recycle.png
+	new file:   WebFundamentals/WebFunBeltExam/option-e.png
+	new file:   WebFundamentals/WebFunBeltExam/reqs
+	new file:   WebFundamentals/about.txt
+	new file:   WebFundamentals/gittest
+	new file:   assignments.txt
+	new file:   iOS/about.txt
+	new file:   netCore/about.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+	modified:   WebFundamentals/Git/gittest (untracked content)
+	modified:   WebFundamentals/gittest (untracked content)
+
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   MEAN/about.txt
+	new file:   Python/about.txt
+	new file:   Ruby/about.txt
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ad_background.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/client_server.jpg
+	new file:   WebFundamentals/CSS/Internet Css Project/images/globe.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/home.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/html.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/ninja.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/phone.png
+	new file:   WebFundamentals/CSS/Internet Css Project/images/www-wordstream.png
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.css
+	new file:   WebFundamentals/CSS/Internet Css Project/internet.html
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.css
+	new file:   WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/index.html
+	new file:   WebFundamentals/CSS/Plotting Blocks/styles.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.css
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio.html
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/CSS.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/HTML.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/JavaScript.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/LAMP.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/MEAN.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/RUBY.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/ajax.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/angular.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/bootstrap.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/c-sharp.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codeigniter.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codepen.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/d3.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/django.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/expressjs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/familycontacts.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/fiveEleven.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/github.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/iOS-Swift.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/jQuery.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/lamode.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/linkedin.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/materialize.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mongodb.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mysql.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/nodejs.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/photo_of_me.jpg
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/php.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/portfolio_assignment.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/python.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/socket.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/sqlite.png
+	new file:   WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/twitter.png
+	new file:   WebFundamentals/CSS/about.txt
+	new file:   WebFundamentals/Git/about.txt
+	new file:   WebFundamentals/Git/test/commands.txt
+	new file:   WebFundamentals/Git/test/index.html
+	new file:   WebFundamentals/HTML/about.txt
+	new file:   WebFundamentals/HTML/fakeBlog.html
+	new file:   WebFundamentals/HTML/formExcercise.html
+	new file:   WebFundamentals/HTML/hello_world.html
+	new file:   WebFundamentals/HTML/indentation.html
+	new file:   WebFundamentals/HTML/index.html
+	new file:   WebFundamentals/HTML/pariprigrammMon.html
+	new file:   WebFundamentals/Javascript/StudentsInstructors.html
+	new file:   WebFundamentals/Javascript/about.txt
+	new file:   WebFundamentals/Javascript/bdayCountdown.html
+	new file:   WebFundamentals/Javascript/declare.js
+	new file:   WebFundamentals/Javascript/fancyArr.js
+	new file:   WebFundamentals/Javascript/fewBillion.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/credit-card.png
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.css
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.js
+	new file:   WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/running.png
+	new file:   WebFundamentals/Javascript/numbersOnly.js
+	new file:   WebFundamentals/Javascript/printRange.js
+	new file:   WebFundamentals/Javascript/randomChance.js
+	new file:   WebFundamentals/Javascript/timeAssignment.js
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.css
+	new file:   WebFundamentals/WebFunBeltExam/WebFunBelt.html
+	new file:   WebFundamentals/WebFunBeltExam/images/icon1.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon2.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon3.png
+	new file:   WebFundamentals/WebFunBeltExam/images/icon4.png
+	new file:   WebFundamentals/WebFunBeltExam/images/main_img.png
+	new file:   WebFundamentals/WebFunBeltExam/images/read_me.txt
+	new file:   WebFundamentals/WebFunBeltExam/images/recycle.png
+	new file:   WebFundamentals/WebFunBeltExam/option-e.png
+	new file:   WebFundamentals/WebFunBeltExam/reqs
+	new file:   WebFundamentals/about.txt
+	new file:   assignments.txt
+	new file:   iOS/about.txt
+	new file:   netCore/about.txt
+
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git commit -m "added all dojoAssignments until the 25th april"
+[master 43e4955] added all dojoAssignments until the 25th april
+ 93 files changed, 1596 insertions(+)
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/ad_background.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/client_server.jpg
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/globe.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/home.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/html.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/ninja.png
+ create mode 100755 WebFundamentals/CSS/Internet Css Project/images/phone.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/images/www-wordstream.png
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/internet.css
+ create mode 100644 WebFundamentals/CSS/Internet Css Project/internet.html
+ create mode 100644 WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.css
+ create mode 100644 WebFundamentals/CSS/JavaScriptBasicsCSS/JavaScriptBasics.html
+ create mode 100644 WebFundamentals/CSS/Plotting Blocks/index.html
+ create mode 100644 WebFundamentals/CSS/Plotting Blocks/styles.css
+ create mode 100644 WebFundamentals/CSS/Portfolio Css Project/Portfolio.css
+ create mode 100644 WebFundamentals/CSS/Portfolio Css Project/Portfolio.html
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/CSS.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/HTML.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/JavaScript.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/LAMP.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/MEAN.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/RUBY.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/ajax.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/angular.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/bootstrap.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/c-sharp.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codeigniter.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/codepen.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/d3.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/django.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/expressjs.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/familycontacts.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/fiveEleven.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/github.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/iOS-Swift.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/jQuery.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/lamode.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/linkedin.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/materialize.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mongodb.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/mysql.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/nodejs.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/photo_of_me.jpg
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/php.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/portfolio_assignment.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/python.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/socket.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/sqlite.png
+ create mode 100755 WebFundamentals/CSS/Portfolio Css Project/Portfolio_images/twitter.png
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 100644 WebFundamentals/Git/test/commands.txt
+ create mode 100644 WebFundamentals/Git/test/index.html
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/fakeBlog.html
+ create mode 100644 WebFundamentals/HTML/formExcercise.html
+ create mode 100644 WebFundamentals/HTML/hello_world.html
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/HTML/index.html
+ create mode 100644 WebFundamentals/HTML/pariprigrammMon.html
+ create mode 100644 WebFundamentals/Javascript/StudentsInstructors.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/Javascript/bdayCountdown.html
+ create mode 100644 WebFundamentals/Javascript/declare.js
+ create mode 100644 WebFundamentals/Javascript/fancyArr.js
+ create mode 100644 WebFundamentals/Javascript/fewBillion.js
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/credit-card.png
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.css
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.html
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/jQueryFunctions.js
+ create mode 100644 WebFundamentals/Javascript/jQuery/JqueryFunctionsProject/running.png
+ create mode 100644 WebFundamentals/Javascript/numbersOnly.js
+ create mode 100644 WebFundamentals/Javascript/printRange.js
+ create mode 100644 WebFundamentals/Javascript/randomChance.js
+ create mode 100644 WebFundamentals/Javascript/timeAssignment.js
+ create mode 100644 WebFundamentals/WebFunBeltExam/WebFunBelt.css
+ create mode 100644 WebFundamentals/WebFunBeltExam/WebFunBelt.html
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon1.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon2.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon3.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/icon4.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/main_img.png
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/read_me.txt
+ create mode 100755 WebFundamentals/WebFunBeltExam/images/recycle.png
+ create mode 100644 WebFundamentals/WebFunBeltExam/option-e.png
+ create mode 100644 WebFundamentals/WebFunBeltExam/reqs
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 assignments.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git push
+Counting objects: 101, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (98/98), done.
+Writing objects: 100% (101/101), 3.61 MiB | 2.05 MiB/s, done.
+Total 101 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/lh15/dojo_assignments.git
+   acff7cf..43e4955  master -> master
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   WebFundamentals/Git/gittest
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+	modified:   WebFundamentals/Git/gittest (untracked content)
+
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git commit -m "with gittest"
+[master 719f058] with gittest
+ 1 file changed, 1 insertion(+)
+ create mode 160000 WebFundamentals/Git/gittest
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 417 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/lh15/dojo_assignments.git
+   43e4955..719f058  master -> master
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git add .
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    WebFundamentals/Git/gittest
+	new file:   WebFundamentals/Git/gittestNew/aboutme.txt
+	new file:   WebFundamentals/Git/gittestNew/git.txt
+	new file:   WebFundamentals/Git/gittestNew/index.html
+	new file:   WebFundamentals/Git/gittestNew/styles.css
+
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git commit-m "gittest fixed"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit-tree
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git commit -m "gittest fixed"
+[master 12ef14e] gittest fixed
+ 5 files changed, 424 insertions(+), 1 deletion(-)
+ delete mode 160000 WebFundamentals/Git/gittest
+ create mode 100644 WebFundamentals/Git/gittestNew/aboutme.txt
+ create mode 100644 WebFundamentals/Git/gittestNew/git.txt
+ create mode 100644 WebFundamentals/Git/gittestNew/index.html
+ create mode 100644 WebFundamentals/Git/gittestNew/styles.css
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Leibels-MacBook-Pro:dojo_assignments Leibel$ git push
+Counting objects: 7, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 3.45 KiB | 0 bytes/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/lh15/dojo_assignments.git
+   719f058..12ef14e  master -> master
+Leibels-MacBook-Pro:dojo_assignments Leibel$ 
