@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-align: center;
+    background: lightslategray;
+}
+
+
+
+#wrapper {
+    padding: 30px;
+    margin: 20px;
+    margin-top: 50px;
+    background: lightsalmon;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 6px 7px 48px -1px rgba(0,0,0,0.65);
+}
+h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    background: none;
+    
+    
+     
+}
+
+
+img {
+    margin: 2px auto;
+    /*margin: 2px;*/
+    display: block;
+}

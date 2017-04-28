@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+
+    
+}
+
+#wrapper {
+    width: 970px;
+    height: 600px;
+    margin: 20px;
+    padding: 0px 0px 20px 0px;
+    background: rosybrown;
+    text-align: center;
+}
+
+#boxes {
+    margin: 20px;
+
+}
+
+.box{
+    background: url("https://cdn0.iconfinder.com/data/icons/crime-protection-people/110/Ninja-512.png");
+    background-size: 200px 200px;
+    height: 200px;
+    width: 200px;
+    border: 5px solid burlywood;
+    display: inline-block;
+}
+
+.box2{
+    background: url("https://cdn0.iconfinder.com/data/icons/crime-protection-people/110/Ninja-512.png");
+    background-size: 200px 200px;
+    height: 200px;
+    width: 200px;
+    border: 5px solid burlywood;
+    display: inline-block;
+}
+
+p {
+    background: lightskyblue;
+    display: block;
+    padding: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+button {
+    background: lightskyblue;
+    border-radius: 10px;
+    border:none;
+    height: 30px;
+    width: 150px;
+    font-size: 1.2em;
+}

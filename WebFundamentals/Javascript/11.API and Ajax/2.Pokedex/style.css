@@ -1,0 +1,21 @@
+#wrapper{
+    margin: 0px;
+    padding: 0px;
+    width: 970px;
+}
+#container {
+    display: inline-block;
+    width: 770px;
+}
+#info {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: 500px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 0px 15px;
+}
+#container img {
+    height: 50px;
+}
