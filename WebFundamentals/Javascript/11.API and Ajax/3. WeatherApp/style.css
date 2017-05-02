@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+body{
+    background: lightgoldenrodyellow;
+}
+input {
+    height: 40px;
+    width: 175px;
+    border: none;
+    border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 25px;
+}
+button{
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    padding: 5px;
+    vertical-align: top;
+    background: white;
+    font-size: 15px;
+}
+#wrapper{
+    margin: 20px auto;
+    background: gray;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+}
+form {
+    font-size: 25px;
+
+}
+#display{
+    margin: 30px 20px;
+}
+
+
+
+
+
+
+.select_style 
+{
+	background: #FFF;
+	overflow: hidden;
+	display: inline-block;
+	color: #525252;
+	font-weight: bold;
+	-webkit-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+	-moz-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+	border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+	-webkit-box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
+	-moz-box-shadow: 0 0 5px rgba(123,123,123,.2);
+	box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
+	/*border: solid 1px #DADADA;*/
+	font-family: "helvetica neue",arial;
+	position: relative;
+	cursor: pointer;
+	padding-right:20px;
+    vertical-align: bottom;
+    margin: 0px 10px;
+    padding: 5px;
+    font-size: 15px;
+
+}
+.select_style span
+{
+	position: absolute;
+	right: 10px;
+	width: 8px;
+	height: 8px;
+	background: url(http://projects.authenticstyle.co.uk/niceselect/arrow.png) no-repeat;
+	top: 50%;
+	margin-top: -4px;
+}
+.select_style select
+{
+	-webkit-appearance: none;
+	appearance:none;
+	width:300px;
+    height: 40px;
+	background:none;
+	background:transparent;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	padding:7px 10px;
+}

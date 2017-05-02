@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>WeatherApp</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">    
-    </head>
-    <body>
+
+<head>
+    <title>WeatherApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
 
 
-            <div id="wrapper">
-                <form action="submit">
-                    <input type="text">
-                    <select id="country">
+    <div id="wrapper">
+        <form action="submit">
+            <input type="text" placeholder="city">
+            <div class="select_style">
+                <select id="country">
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Åland Islands</option>
                         <option value="AL">Albania</option>
@@ -263,18 +266,20 @@
                         <option value="ZM">Zambia</option>
                         <option value="ZW">Zimbabwe</option>
                     </select>
-                    <button type="submit"></button>
-                </form>
-                <div id="display"></div>
-                    
+                <span></span>
             </div>
+            <button type="submit">GO!</button>
+        </form>
+        <div id="display"></div>
+
+    </div>
 
 
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="index.js"></script>
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
 </html>
-
