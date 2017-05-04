@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Layouts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="style.css" rel="stylesheet">-->
+        <style>
+            
+		* {
+			/*margin: 0px;
+    		padding: 0px; */
+			border-radius: 5px;
+		}
+		
+		body {
+			background: lightcyan;
+            font-size: 1em;
+		}
+		
+		#container {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#header {
+			background: lightcoral;
+			padding: 10px;
+		}
+		
+		#navBar {
+			background: lightgreen;
+			padding: 5px;
+			margin: 20px 0px;
+		}
+		
+		#content {
+			background: lightskyblue;
+			padding: 5px;
+		}
+		
+		.article {
+			display: inline-block;
+			vertical-align: top;
+			width: 24%;
+		}
+		
+		a {
+			display: inline-block;
+			width: 12%;
+			white-space: nowrap;
+			/*font-size: .8em;*/
+			text-align: center;
+		}
+		
+		@media only screen and (max-width: 802px) {
+			#navBar {
+				display: none;
+			}
+			.three-s {
+				width: 32%;
+			}
+			.one-s {
+				width: 100%;
+			}
+            /*body { font-size: .7em; }*/
+		}
+	
+        </style>
+    </head>
+    <body>
+    
+        <div id="container">
+            <div id="header">
+                <h1>Leibel's Blog</h1>
+                <h3>Feeling relieved to know about Lorem Ipsum :)</h3>
+            </div>
+            <div id="navBar" class="twelve-s">
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+                <a href="">Videos</a>
+                <a href="">Pricing</a>
+                <a href="">Something...</a>
+                <a href="">more...</a>
+                <a href="">Even More...</a>
+            </div>
+            <div id="content">
+                <div class="article three-s">
+                    <h4>Article 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit quam saepe dolores aperiam ea cupiditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati.</p>
+                </div>
+                <div class="article three-s">
+                    <h4>Article 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit quam saepe dolores aperiam ea cupiditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati. iditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati</p>
+                </div>
+                <div class="article three-s">
+                    <h4>Article 3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit quam saepe dolores aperiam ea cupiditate rerum, quisquam totam consectetur quos accusamus obcaecati. iditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati</p>
+                </div>
+                <div class="article one-s">
+                    <h4>Article 4</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit quam saepe dolores aperiam ea cupiditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati. iditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati, iditate ducimus cum libero, assumenda hic tempora nobis rerum, quisquam totam consectetur quos accusamus obcaecati</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

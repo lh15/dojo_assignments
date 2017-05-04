@@ -1,0 +1,50 @@
+* { 
+    /*margin: 0px;
+    padding: 0px; */
+    border-radius: 5px;
+}
+
+body {
+    background: lightcyan;
+}
+
+#container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header{
+    background: lightcoral;
+    padding: 10px;
+}
+#navBar{
+    background: lightgreen;
+    padding: 5px;
+    margin: 20px 0px;
+}
+#content{
+    
+    background: lightskyblue;
+    padding: 5px;
+}
+.article {
+    display: inline-block;
+    vertical-align: top;
+    width: 24%;
+}
+a {
+    display: inline-block;
+    width: 12%;
+    white-space: nowrap;
+    /*font-size: .8em;*/
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 802px) {
+	#navBar { display: none ; }
+    .three-s { width: 32%; }
+    .one-s {width: 100%;}
+}
+

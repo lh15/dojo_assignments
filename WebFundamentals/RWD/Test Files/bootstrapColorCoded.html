@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Color Coded</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- add https:// before the website name-->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 1.2em;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+        div{
+            border: 1px solid black;
+            height: 50px; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+    </div>
+
+    <script>
+        function randomColor() {
+            // pick a red from 0-255
+            var r = Math.floor(Math.random() * 256);
+            // pick a green from 0-255
+            var g = Math.floor(Math.random() * 256);
+            // pick a blue from 0-255
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + ", " + g + ", " + b + ")";
+        }
+
+        var elements = document.getElementsByClassName('col-md-1');
+        var color = randomColor();
+        for (var i = 0, l = elements.length; i < l; i++) {
+            elements[i].style.backgroundColor = color;
+        }
+        var elements = document.getElementsByClassName('col-md-4');
+        var color = randomColor();
+        for (var i = 0, l = elements.length; i < l; i++) {
+            elements[i].style.backgroundColor = color;
+        }
+        var elements = document.getElementsByClassName('col-md-6');
+        var color = randomColor();
+        for (var i = 0, l = elements.length; i < l; i++) {
+            elements[i].style.backgroundColor = color;
+        }
+        var elements = document.getElementsByClassName('col-md-8');
+        var color = randomColor();
+        for (var i = 0, l = elements.length; i < l; i++) {
+            elements[i].style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>

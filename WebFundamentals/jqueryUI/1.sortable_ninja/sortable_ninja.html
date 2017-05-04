@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sortable Ninja</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="css/style.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        body {
+            background: lightslategray;
+        }
+        
+        #wrapper {
+            width: 350px;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+        }
+        
+        img {
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" class="sortable">
+        <img src="sort1.png" alt="sort1">
+        <img src="sort2.png" alt="sort2">
+        <img src="sort3.png" alt="sort3">
+        <img src="sort4.png" alt="sort4">
+        <img src="sort5.png" alt="sort5">
+    </div>
+  
+    <script>
+        $(".sortable").sortable();
+    </script>
+</body>
+
+</html>

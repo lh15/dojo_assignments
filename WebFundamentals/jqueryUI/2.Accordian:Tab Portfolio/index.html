@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Tabs - Default functionality</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Comfortaa" rel="stylesheet">
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+        $(function () {
+            $("#accordion").accordion({ heightStyle: "content", collapsible: true });
+        });
+    </script>
+</head>
+
+<body>
+    <!--used jquery-ui to switch between tabs, but the problem is that it wont work with the jquery-ui stylesheet so I should switch the functionality to regular jquery hide and show. -->
+    <div id="wrapper">
+        <div class="header">
+            <h1>Leibel Hecht</h1>
+            <h4>Software Developer...   Kinda :)</h4>
+        </div>
+        <hr class="style13">
+
+        <div id="tabs">
+            <ul>
+                <li><a href="#fragment-1">Selected Work</a></li>
+                <li><a href="#fragment-2">About</a></li>
+                <li><a href="#fragment-3">Blog</a></li>
+            </ul>
+            <hr class="style13">
+            <br>
+            <div id="fragment-1">
+                <div class="project"><img src="running.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="portfolio.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="streetfighter.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="project.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="project.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="project.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="project.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="project.png" alt=""><a href="">Link to my Project</a></div>
+                <div class="project"><img src="project.png" alt=""><a href="">Link to my Project</a></div>
+
+
+            </div>
+            <div id="fragment-2">
+                used jquery-ui to switch between tabs, but the problem is that it wont work with the jquery-ui stylesheet so I should switch
+                the functionality to regular jquery hide and show.
+                <br>
+                <br> bottle green juice. Yuccie scenester fashion axe typewriter. Williamsburg bespoke letterpress, twee
+                vice yr banjo roof party yuccie typewriter. Actually kickstarter leggings retro, affogato direct trade wayfarers
+                iceland bushwick gochujang mlkshk 90's tumblr humblebrag aesthetic. YOLO lo-fi salvia locavore gentrify.
+                Prism everyday carry slow-carb ramps vice forage, ugh chartreuse typewriter brooklyn. Gochujang readymade
+                shoreditch waistcoat small batch. Biodiesel sartorial gluten-free woke, you probably haven't heard of them
+                edison bulb thundercats authentic cray banh mi literally gochujang post-ironic austin. Woke try-hard actually
+                snackwave brunch, etsy iceland listicle intelligentsia lyft. Cliche butcher tote bag, asymmetrical fanny
+                pack normcore raclette leggings retro man bun meditation. Jean shorts cliche bushwick you probably haven't
+                heard of them DIY leggings. Tumeric affogato bespoke sustainable, XOXO master cleanse mixtape truffaut vexillologist.
+                <br>
+                <br> Umami lyft echo park pop-up. Affogato tumeric truffaut ugh. Occupy master cleanse semiotics seitan selvage
+                poke, fixie squid. Tousled listicle authentic brooklyn irony. Man braid offal authentic locavore. Sustainable
+                sartorial bespoke mixtape hashtag banh mi, venmo williamsburg hella dreamcatcher. Fap seitan lo-fi fanny
+                pack 3 wolf moon vegan. Biodiesel waistcoat pour-over street art.
+            </div>
+            <div id="fragment-3">
+                <div id="accordion">
+                    <h3>Blog post 1</h3>
+                    <div>
+                        <p>
+                            Helvetica whatever wolf lo-fi locavore. Flannel chillwave normcore, XOXO squid meditation marfa pop-up vegan polaroid enamel
+                            pin asymmetrical brunch. Distillery kombucha knausgaard, air plant chartreuse 8-bit DIY try-hard
+                            narwhal 90's sartorial you probably haven't heard of them crucifix man braid tbh. Meggings flannel
+                            single-origin coffee food truck, pop-up pickled seitan swag mixtape raw denim brunch. Quinoa
+                            flexitarian fam celiac bitters. Ennui cornhole neutra mustache. Cray chillwave copper mug pabst
+                            messenger bag, gentrify everyday carry man braid meh church-key venmo brooklyn truffaut poke.
+                            Stumptown slow-carb truffaut salvia edison bulb occupy. Biodiesel marfa occupy aesthetic sartorial,
+                            activated charcoal meditation edison bulb banjo etsy plaid brunch. Shoreditch mixtape franzen
+                            organic. Food truck blue bottle enamel pin drinking vinegar chia poke. 3 wolf moon tilde health
+                            goth iceland readymade. Twee vexillologist cred, fixie kitsch yr celiac franzen subway tile edison
+                            bulb PBR&B. Four dollar toast leggings freegan, artisan keffiyeh blog etsy next level stumptown
+                            paleo fashion axe heirloom bespoke crucifix.
+                        </p>
+                    </div>
+                    <h3>Blog post 2</h3>
+                    <div>
+                        <p>
+                            Listicle lumbersexual drinking vinegar pickled bicycle rights wolf. Vinyl cliche ramps, pok pok shoreditch af disrupt fashion
+                            axe raw denim. Leggings actually chicharrones flexitarian, +1 cronut helvetica glossier. Trust
+                            fund blue bottle cronut, humblebrag forage crucifix portland green juice 3 wolf moon. Iceland
+                            health goth authentic, four loko ethical keytar pour-over pitchfork trust fund banh mi vape.
+                            Vice kinfolk bitters, four dollar toast irony trust fund single-origin coffee put a bird on it
+                            banh mi man braid. Butcher leggings listicle, migas tacos schlitz waistcoat keffiyeh church-key
+                            swag ugh post-ironic deep v normcore. Subway tile scenester truffaut, bitters chillwave master
+                            cleanse kogi wolf flannel polaroid tbh microdosing. Kogi iceland hot chicken, stumptown iPhone
+                            pickled tofu. Crucifix enamel pin meh glossier four dollar toast. Hella kombucha typewriter ramps
+                            meggings VHS tofu readymade raclette, succulents keytar asymmetrical brunch. Shabby chic roof
+                            party selvage meditation iceland organic kinfolk deep v, normcore hexagon asymmetrical live-edge
+                            snackwave. Hoodie mustache messenger bag, umami swag yuccie pok pok hashtag gentrify hella raw
+                            denim kitsch tumeric cronut venmo. Scenester shabby chic forage, yuccie roof party etsy chartreuse
+                            mustache cliche echo park sartorial kogi. Godard aesthetic sartorial organic tattooed cronut,
+                            direct trade chillwave vaporware bushwick lyft hell of roof party enamel pin. Chicharrones neutra
+                            man braid chia +1 PBR&B. Ethical kickstarter actually iceland, mustache gentrify seitan DIY art
+                            party quinoa enamel pin coloring book +1 before they sold out butcher. Art party vape narwhal
+                            cronut, before they sold out viral brooklyn freegan fam air plant. Fap disrupt pug four loko
+                            hell of austin. Iceland art party yr flannel. Authentic vinyl tacos, four dollar toast tattooed
+                            XOXO af.
+                        </p>
+                    </div>
+                    <h3>Blog post 3</h3>
+                    <div>
+                        <p>
+                            Vexillologist umami pinterest meggings bespoke, mixtape kombucha flexitarian edison bulb. Brunch pour-over YOLO hashtag iPhone.
+                            Austin tattooed echo park truffaut yuccie tumeric, brunch tumblr sustainable woke meggings poke
+                            semiotics +1. Health goth quinoa mlkshk selvage, chartreuse salvia synth. Taxidermy affogato
+                            lumbersexual, chartreuse everyday carry activated charcoal banh mi XOXO kogi. Gluten-free knausgaard
+                            kickstarter etsy chartreuse marfa, cliche 3 wolf moon selfies aesthetic locavore. Semiotics cray
+                            distillery ugh, photo booth small batch bespoke. Umami trust fund typewriter selvage paleo sustainable
+                            shoreditch succulents, tattooed pork belly aesthetic plaid lumbersexual. Hoodie fashion axe bushwick,
+                            helvetica fixie organic selfies vinyl humblebrag shabby chic pabst franzen pug brooklyn poke.
+                            Gochujang austin bicycle rights ramps intelligentsia, subway tile truffaut roof party flannel
+                            meh freegan 8-bit pork belly hell of swag. Vice kogi kitsch vexillologist, flannel put a bird
+                            on it raclette cardigan salvia man bun vinyl. Pour-over meditation marfa, hell of bicycle rights
+                            twee meggings selfies bushwick pug. Twee pinterest narwhal, scenester intelligentsia etsy flannel
+                            tote bag typewriter trust fund banh mi craft beer shabby chic. Cray readymade mlkshk, man bun
+                            yr chia tbh austin hammock glossier cardigan snackwave paleo marfa 8-bit. Coloring book woke
+                            mixtape selfies. Venmo normcore art party vexillologist, jianbing bicycle rights four dollar
+                            toast single-origin coffee 8-bit trust fund. Thundercats occupy brunch, chartreuse disrupt listicle
+                            DIY blog cred flannel iceland truffaut kitsch ugh butcher. Kale chips venmo cred, kinfolk dreamcatcher
+                            tattooed gluten-free iceland four loko bicycle rights hella. Leggings actually viral edison bulb
+                            pabst cold-pressed keffiyeh artisan, tbh air plant hexagon shoreditch fashion axe kitsch. Brunch
+                            vaporware vinyl lumbersexual marfa. Gluten-free street art yuccie, cliche franzen tbh affogato
+                            tattooed.
+                        </p>
+                    </div>
+                    <h3>Blog post 4</h3>
+                    <div>
+                        <p>
+                            Try-hard aesthetic cardigan post-ironic 8-bit gochujang you probably haven't heard of them, bushwick cray prism hot chicken.
+                            Keffiyeh 8-bit vice fam, lo-fi jianbing put a bird on it shabby chic wolf. Tattooed locavore
+                            health goth, authentic forage farm-to-table fashion axe gastropub literally portland lyft messenger
+                            bag butcher waistcoat. Pop-up flexitarian literally poutine, pitchfork tbh paleo fingerstache
+                            snackwave cred tilde migas. Try-hard etsy organic, franzen hell of mustache fam plaid pok pok
+                            yuccie kale chips brooklyn cold-pressed pork belly. Disrupt enamel pin post-ironic keytar snackwave
+                            small batch, echo park cardigan swag squid intelligentsia organic lomo thundercats. Williamsburg
+                            pitchfork humblebrag, blue bottle portland edison bulb semiotics gluten-free crucifix shoreditch.
+                            Marfa snackwave activated charcoal hexagon, four dollar toast selvage retro viral. Semiotics
+                            polaroid pug raw denim live-edge. Affogato butcher stumptown sustainable meggings. Neutra retro
+                            intelligentsia, hella photo booth fanny pack health goth post-ironic kickstarter. Tumblr cold-pressed
+                            swag, beard kale chips meditation try-hard banh mi tilde chia pinterest. Aesthetic biodiesel
+                            truffaut roof party, selfies scenester pitchfork actually. Wolf hell of pabst, chillwave bicycle
+                            rights neutra ethical marfa lo-fi chambray kale chips tilde kickstarter tumeric. Ugh pork belly
+                            live-edge, pitchfork occupy brooklyn unicorn lomo gastropub. Poke single-origin coffee sartorial
+                            next level, hot chicken hell of kombucha meditation XOXO typewriter vegan yuccie lyft messenger
+                            bag. Selvage readymade bespoke, portland ennui kinfolk ramps. Freegan everyday carry poke air
+                            plant art party roof party, la croix wolf. Neutra cray poke tumblr normcore shoreditch, kale
+                            chips iPhone bushwick blue bottle pitchfork cornhole ugh hot chicken austin. Occupy PBR&B tofu,
+                            farm-to-table snackwave cold-pressed fingerstache intelligentsia lomo sriracha. Letterpress flexitarian
+                            meditation, blog cliche banh mi ugh pork belly air plant.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

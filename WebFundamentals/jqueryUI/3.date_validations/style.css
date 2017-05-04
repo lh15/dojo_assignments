@@ -1,0 +1,59 @@
+* {
+    
+    
+    font-family: Arvo;
+    
+}
+body {
+    background: lightgreen;
+    
+}
+
+#wrapper{
+    
+    width: 40%;
+    /*height: 500px;*/
+    margin: 40px auto;
+    background: lightseagreen;
+    padding: 20px;
+    text-align: center;
+    /*line-height: 2.5em;*/
+    box-shadow: 10px 10px 40px -9px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    /*height: auto;        These two lines were the key. */
+    /*min-height: 100%;*/
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+button{
+    margin-top: 20px;
+    padding: 5px 30px;
+    font-size: 1.5em;
+    
+}
+form {
+    font-size: 1.5em;
+}
+p {
+    margin: 0px;
+}
+input {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
