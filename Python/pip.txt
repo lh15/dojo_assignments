@@ -1,0 +1,45 @@
+pip install Django  - I learned that this needs to be run outisde of the python enviroment
+
+pip list - Got this message "DEPRECATION: The default format will switch to columns in the future. You can use --format=legacy        (or define a list_format in your pip.conf) to disable this warning.
+    pip (9.0.0)
+    setuptools (18.2)
+    wheel (0.24.0)"
+    I searched and found that this message is not an error but a  warning about an upcoming change.
+
+pip install Django
+    Requirement already satisfied: Django in /usr/local/lib/python2.7/site-packages
+    Requirement already satisfied: pytz in /usr/local/lib/python2.7/site-packages (from Django)
+
+pip freeze - 
+    pip list-
+    List installed packages, including editables.
+    pip freeze-
+    Output installed packages in requirements format.
+    So there are two differences:
+    Output format, freeze gives us the standard requirement format that may be used later with pip install -r to install requirements from.
+    Output content, pip list include editables which pip freeze does not.
+
+Leibels-MacBook-Pro:Desktop Leibel$ pip freeze > requirements.txt
+Leibels-MacBook-Pro:Desktop Leibel$ ls
+    Anything but code	LinkedIn Ideas		Visual Studio Code.app
+    Coding Dojo		Mauricio		dojo_assignments
+    Dojo Screenshots	OtherCodingRecourses	requirements.txt
+
+Leibels-MacBook-Pro:Desktop Leibel$ pip uninstall Django
+Uninstalling Django-1.11:
+  /usr/local/bin/django-admin
+  /usr/local/bin/django-admin.py
+  /usr/local/bin/django-admin.pyc
+  /usr/local/lib/python2.7/site-packages/Django-1.11.dist-info/DESCRIPTION.rst
+  /usr/local/lib/python2.7/site-packages/Django-1.11.dist-info/INSTALLER
+  /usr/local/lib/python2.7/site-packages/Django-1.11.dist-info/LICENSE.txt
+  /usr/local/lib/python2.7/site-packages/Django-1.11.dist-info/METADATA
+  /usr/local/lib/python2.7/site-packages/Django-1.11.dist-info/RECORD............................................
+Proceed (y/n)? y   
+  Successfully uninstalled Django-1.11
+
+pip show Django - 
+    doesnt do anything. I guess bc it cant find the file
+
+pip search flask - 
+    Returns a list of every package with Flask in the name or description.
