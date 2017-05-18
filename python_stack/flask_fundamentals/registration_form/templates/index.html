@@ -1,0 +1,25 @@
+
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <!--<h1>Enter a Valid(Any) Email!</h1>-->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form action='/process' method='POST'>
+    Email:<input type="text" name="email" value="{{session['email']}}"><br>
+    First Name:<input type="text" name="first" value="{{session['first']}}"><br>
+    Last name:<input type="text" name="last" value="{{session['last']}}"><br>
+    Birthday:<input type="text" name="bday" value="{{session['bday']}}"><br>
+    Password:<input type="password" name="pass" ><br>
+    Confirm Password:<input type="password" name="passConf"><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

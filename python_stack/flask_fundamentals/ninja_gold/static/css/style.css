@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+#buildings div{
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+}
+#buildings{
+    text-align: center;
+
+}
+#log{
+    border: 2px solid black;
+    /*height: 100px;*/
+    width: 70%;
+    display: inline-block;
+}

@@ -1,0 +1,8 @@
+USE lead_gen_business;
+
+SELECT clients.first_name, clients.Last_name, billing.amount, billing.charged_datetime
+FROM clients
+JOIN billing ON clients.id = billing.clients_id;
+
+SELECT *
+FROM sites

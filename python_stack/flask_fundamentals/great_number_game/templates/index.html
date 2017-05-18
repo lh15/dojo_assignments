@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Great Number Game</title>
+</head>
+
+<body style="text-align:center;">
+    <h1 style="color: red;">Works, but messy and Code needs to be fixed to use interpolated expressions instead of appending html Markup...</h1>
+    <h1>Welcome to Leibel's' Great Number Game!</h1>
+    <h3>I am thinking of a number between 1 and 100</h3>
+    <h3>Happy Guessing :)</h3>
+    {{session["newHtml"]}}
+      {% if session["green"] == True %}
+      <form id="guess" method="post" action="/userguess" style="display: none;">
+        <input type="text" name="user_guess" value="0">
+        <input type="submit" name="guess_button" value="Submit Guess"/>
+      </form>
+      {% elif session["green"] == False %}
+    <form id="guess" method="post" action="/userguess">
+        <input type="text" name="user_guess" value="0">
+        <input type="submit" name="guess_button" value="Submit Guess"/>
+    </form>
+      {% endif %}
+
+     
+</body>
+
+</html>
+

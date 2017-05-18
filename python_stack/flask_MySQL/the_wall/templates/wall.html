@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>the wall</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            width: 80%;
+            text-align: center;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding Dojo Wall</h1>
+    <p>Welcome {{ session['logged_in']}}</p>
+    <a href="/log_out">log off</a>
+    <hr>
+    <div class="container">
+        <form action="/process_message" method="POST">
+                <h1>Welcome to the Dojo message wall</h1>
+                <hr>
+                <p>Post a message</p>
+                <textarea name="message" style="width: 80%; height: 200px;" required></textarea><br>
+                <button type="submit" class="signupbtn">Post Message</button>
+
+        </form>
+
+        {% for message in all_messages: %}
+        <hr>
+        <h3>Posted by: {{ message['first_name'] + " " + message['last_name'] }}  - Posted on: {{ message['created_at'] }}</h3>
+        <p>{{ message['message'] }}</p>
+            {% for comment in all_comments: %}
+                {% if message['id'] == comment['message_id'] %}
+                <p>Comment</p>
+                    <p>{{comment['comment']}}</p>
+                {% endif %}
+            {% endfor %}
+        <form action="/process_comment/{{message['id']}}" method="POST">
+            <div class="container">
+                <p>Post a comment</p>
+                <input name="comment" required></input><br>
+                <button type="submit">Post Comment</button>
+        </form>
+        {% endfor %}
+        </div>
+</body>
+
+</html>

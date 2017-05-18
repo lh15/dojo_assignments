@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>counter app</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <h3>You reloaded this page {{session['times']}} times!</h3>
+    <form>
+
+    </form>
+    <form id="plus2" method="post" action="/plus2">
+        <input type="submit" name="plus2" value="plus2"/>
+    </form>
+    <form id="reset" method="post" action="/reset">
+        <input type="submit" name="reset" value="reset"/>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Full_Friends</title>
+  <style>
+body {
+    font-family: arial, sans-serif;
+    }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <h1>These are my full friends! (as in the full friends assignment :)</h1>
+<!-- we can use the line below to see all of our data in our template -->
+<!--<h1>These are all my friends!</h1>-->
+ <!--with all the data we can then construct a more structured output -->
+ <table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Friend Since</th>
+    <th>Year</th>
+  </tr>
+  {% for friend in all_friends: %}
+  <tr>
+    <td>{{ friend['id'] }}</td>
+    <td>{{ friend['first_name'] + " " + friend['last_name']}}</td>
+    <td>{{ friend['age'] }}</td>
+    <td>{{ friend['friend_since_date'] }}</td>
+    <td>{{ friend['friend_since_yr'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+  <hr>
+  <h2>Add a Friend</h2>
+  <form action='/friends/new' method='POST'>
+    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label><br>
+    <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label><br>
+    <label for="Age">Age:<input type="text" name="age" id="age"></label><br>
+    <label for="friend_since_date">When did we become friends?:<input type="text" name="friend_since_date" id="friend_since_date"></label><br>
+    <label for="friend_since_yr">Year:<input type="text" name="friend_since_yr" id="friend_since_yr"></label><br>
+    <input type="submit" value="Add">
+  </form>
+</body>
+</html>
