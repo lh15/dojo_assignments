@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Ninja Gold Game django</title>
+    <!-- linking a css style sheet -->
+    {% load staticfiles %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'ourApp/css/style.css' %}"media="screen" title="no title"  charset="utf-8">
+    
+</head>
+
+<body>
+    <h2>django edition</h2>
+    <div id="yourGold">
+        <h2>Your Gold: {{session['gold']}}</h2>
+    </div>
+    <form action="/reset" method="post">
+    {% csrf_token %}
+                <input type="submit" value="reset game" />
+            </form>
+    <div id="buildings">
+        <div id="farm">
+            <h2>Farm</h2>
+            <p>(earns 10-20 golds)</p>
+            <form action="/process" method="post">
+            {% csrf_token %}
+                <input type="hidden" name="building" value="farm" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+        </div>
+        <div id="cave">
+            <h2>Cave</h2>
+            <p>(earns 5-10 golds)</p>
+            <form action="/process" method="post">
+            {% csrf_token %}
+                <input type="hidden" name="building" value="cave" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+        </div>
+        <div id="house">
+            <h2>House</h2>
+            <p>(earns 2-5 golds)</p>
+            <form action="/process" method="post">
+            {% csrf_token %}
+                <input type="hidden" name="building" value="house" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+        </div>
+        <div id="casino">
+            <h2>Casino</h2>
+            <p>(earns/takes 0-50 golds)</p>
+            <form action="/process" method="post">
+            {% csrf_token %}
+                <input type="hidden" name="building" value="casino" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+        </div>
+    </div>
+    <br>
+        <div id="log">
+            <h3>Activities:</h3>
+            
+            {% for item in session['activities'] %}
+                {% if 'earned' in item %}
+                <p style="color: green;"> {{item}} </p>
+                {% else %}
+                <p style="color: red;"> {{item}} </p>
+                {% endif %}
+            {% endfor %}
+            
+        </div>
+</body>
+
+</html>
