@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Surprise me!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Surprise me!</h1>
+    <p>Pick a number from one to 10 to get a random list of words</p>
+    <form action="/process" method="post">
+        {% csrf_token %}
+        <select name="user_num" required>
+            <option value="" disabled="disabled" selected="selected">Pick a number</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

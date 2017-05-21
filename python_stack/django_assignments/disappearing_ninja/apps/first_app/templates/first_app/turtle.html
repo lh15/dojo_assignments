@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet.css' %}">
+    <script src="{% static 'first_app/js/main.js' %}">
+
+    </script>
+</head>
+
+<body>
+    <h2>{{turtle}}!</h2>
+    {% if turtle == "leonardo" %}
+        <img src="{% static 'first_app/images/leonardo.jpg' %}" alt="img">
+    {% elif turtle == "michelangelo" %}
+        <img src="{% static 'first_app/images/michelangelo.jpg' %}" alt="img">
+    {% elif turtle == "raphael" %}
+        <img src="{% static 'first_app/images/raphael.jpg' %}" alt="img">
+    {% elif turtle == "donatello" %}
+        <img src="{% static 'first_app/images/donatello.jpg' %}" alt="img">
+    {% else %}
+        <img src="{% static 'first_app/images/notapril.jpg' %}" alt="img">
+    {% endif %}
+    
+</body>
+
+</html>

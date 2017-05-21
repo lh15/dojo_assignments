@@ -57,3 +57,6 @@ from views import *
 urlpatterns = [
     url(r'^$', index, name = 'my_index'),
 ]
+
+
+Add session commands
