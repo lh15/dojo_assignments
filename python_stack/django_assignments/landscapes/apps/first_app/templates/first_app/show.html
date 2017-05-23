@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet.css' %}">
+</head>
+
+<body>
+    <h1>Your random image of the day is:</h1>
+    {% if landscape == "snow" %}
+        <img src="https://static.pexels.com/photos/30276/pexels-photo.jpg" alt="img">
+    {% elif landscape == "desert" %}
+        <img src="https://static.pexels.com/photos/73820/joshua-tree-national-park-mojave-desert-rocks-landscape-73820.jpeg" alt="img">
+    {% elif landscape == "forest" %}
+        <img src="https://static.pexels.com/photos/26750/pexels-photo-26750.jpg" alt="img">
+    {% elif landscape == "vineyard" %}
+        <img src="https://static.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg" alt="img">
+    {% elif landscape == "tropical" %}
+        <img src="https://static.pexels.com/photos/286408/pexels-photo-286408.jpeg" alt="img">
+    {% elif landscape == "prime" %}
+        <h3>You picked a prime number!! Here is your randomER random image</h3>
+        {% if randNum == 1 %}
+        <img src="https://static.pexels.com/photos/30276/pexels-photo.jpg" alt="img">
+        {% elif randNum == 2 %}
+            <img src="https://static.pexels.com/photos/73820/joshua-tree-national-park-mojave-desert-rocks-landscape-73820.jpeg" alt="img">
+        {% elif randNum == 3 %}
+            <img src="https://static.pexels.com/photos/26750/pexels-photo-26750.jpg" alt="img">
+        {% elif randNum == 4 %}
+            <img src="https://static.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg" alt="img">
+        {% elif randNum == 5 %}
+            <img src="https://static.pexels.com/photos/286408/pexels-photo-286408.jpeg" alt="img">
+        {% endif %}
+    {% endif %}
+    
+</body>
+
+</html>
