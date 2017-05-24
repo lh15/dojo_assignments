@@ -16,5 +16,6 @@ Including another URLconf
 from django.conf.urls import url, include # Notice we added include
 from django.contrib import admin
 urlpatterns = [
-	url(r'^', include('apps.first_app.urls')), # And now we use include to pull in our first_app.urls...
+	url(r'^', include('apps.first_app.urls', namespace='first_app')),
+    url(r'^tz_detect/', include('tz_detect.urls')), # And now we use include to pull in our first_app.urls...
 ]

@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('apps.time_display_app.urls')),
+    url(r'^tz_detect/', include('tz_detect.urls')),
 ]

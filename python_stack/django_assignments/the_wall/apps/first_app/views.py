@@ -1,10 +1,17 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
+from django.core.urlresolvers import reverse
 import re
 import datetime
+import pytz
+from tzlocal import get_localzone 
+from django.utils.translation import to_locale, get_language
 import os, binascii
 import md5 
-from .models import User, Message, Commment
+from .models import User, Message, Comment
+
+from django.utils import timezone
+from django.utils.deprecation import MiddlewareMixin
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 NAME_REGEX = re.compile(r'^[A-Za-z_-]*$')
@@ -19,117 +26,105 @@ def index(request):
         return render(request, "first_app/index.html")
         print request.session['logged_in']
     else:
-        print session['logged_in']
+        print request.session['logged_in']
         return redirect('/wall')
 
 def login(request):
     return render(request, "first_app/login.html")
 
 def log_out(request):
-    session.pop('logged_in')
-    return redirect('/')
+    request.session.pop('logged_in')
+    return redirect('/login')
 
 def process(request):
-    error = False
-    request.session['first_name'] = request.POST['first_name']
-    request.session['last_name'] = request.POST['last_name']
-    request.session['email'] = request.POST['email'] 
-    password = request.POST['psw']
-    password_rpt = request.POST['psw-repeat']
-    if len(email) < 1:
-        messages.error(request, 'Email cannot be blank!')
-        error = True
-    if len(password) < 9:
-        messages.error(request, 'Password must be at least 8 charachters!')        
-        error = True
-    if password != password_rpt:
-        messages.error(request, 'Password does not match!')        
-        error = True
-    if len(first_name) < 2:
-        messages.error(request, 'Name must have at least 2 letters!')                
-        error = True
-    if len(last_name) < 2:
-        messages.error(request, 'Name must have at least 2 letters!')  
-        error = True
-    if not NAME_REGEX.match(first_name):
-        messages.error(request, 'Only letters please!')                        
-        error = True
-    if not NAME_REGEX.match(last_name):
-        messages.error(request, 'Only letters please!')                        
-        error = True
-    if not EMAIL_REGEX.match(email):
-        messages.error(request, 'Invalid Email Address!')                        
-        error = True
-    else:
-        if User.objects.filter(email=email).exists():
-            email_exists =  True
-            messages.error(request, 'Email address not available, choose a different one, or click login to go to login') 
-            return redirect('/')
-        else:
-            email_exists = False
-            messages.success(request, 'Success!')
-            error = False
-            salt =  binascii.b2a_hex(os.urandom(15))
-            hashed_pw = md5.new(password + salt).hexdigest()
-            User.objects.create(first_name = request.POST['first_name'], last_name= request.POST['last_name'], email = request.POST['email'],  password=hashed_pw, salt = salt)
-            request.session['logged_in'] = email
-            return redirect('/wall')
+    if request.method == "POST":
+        error = False
+         # for now i am passing in the entire request object for the sake of the django messages(will fix), and i am using session to repopulate the fields,
+        user = User.objects.register(request.POST, request.session, request)
+        error = False
+        if user:
+                return redirect('/wall')
+        return redirect('/')
     return redirect('/')
 
 def submit_login(request):
-    email = request.POST['email']
-    password = request.POST['psw']
-    user = User.objects.filter(email=email)
-    if len(user) != 0:
-        encrypted_password = md5.new(password + user[0]['salt']).hexdigest();
-        if user[0]['password'] == encrypted_password:
-            request.session['logged_in'] = email
+    if request.method == "POST":
+        error = False
+        # for now i am passing in the entire request object for the sake of the django messages(will fix), and i am using session to repopulate the fields
+        user = User.objects.login(request.POST, request.session, request)
+        if user:
             return redirect('/wall')
-        else:
-            messages.error(request, 'Invalid Password!') 
+        else:         
             return redirect('/login')
-    else:
-        messages.error(request, 'Invalid Email Address!')         
         return redirect('/login')
 
 def post_message(request):
-    message = request.POST['message']
-    user = User.objects.filter(email=request.session['logged_in'])
-    print user
-    user_id = user[0]['id']
-    Message.objects.create(message = message, user_id= user_id)
-    
-    return redirect('/wall')
+    if request.method == "POST":
+        message = request.POST['message']
+        user = User.objects.get(email=request.session['logged_in'])
+        print user
+        Message.objects.create(message = message, user= user)
+        
+        return redirect('/wall')
+    return redirect('/')
 
 def post_comment(request, message_id):
-    comment = request.POST['comment']
-    user = User.objects.filter(email=request.session['logged_in'])
-    print user
-    user_id = user[0]['id']
+    if request.method == "POST":
+        comment = request.POST['comment']
+        user = User.objects.get(email=request.session['logged_in'])
+        print user
+        message = Message.objects.get(id=message_id)
+        Comment.objects.create(comment = comment, user= user, message = message)
+        return redirect('/wall')
+    return redirect('/')
 
-    message_id = message_id
-    Comment.objects.create(comment = comment, user_id= user_id, message_id = message_id)
-    return redirect('/wall')
+def delete_comment(request, id):
+    if request.method == "POST":
+        comment = Comment.objects.get(id=id)
+        print comment
+        if comment.user.email == request.session['logged_in']:
+            comment.delete()
+        else:
+            messages.error(request, 'You did not write this comment! Only the author can delete or edit.')
+        
+        return redirect('/wall')
+    return redirect('/')
+
+def delete_message(request, id):
+    if request.method == "POST":
+        message = Message.objects.get(id=id)
+        print message
+        if message.user.email == request.session['logged_in']:
+            message.delete()
+        else:
+            messages.error(request, 'You did not write this comment! Only the author can delete or edit.')
+        return redirect('/wall')
+    return redirect('/')
 
 def success(request):
     return render(request, 'first_app/success.html')
 
 
 def wall(request):
-    if request.session['logged_in'] == False:
-        return redirect('/')
-        print request.session['logged_in']
+    try:
+        if request.session['logged_in'] == False:
+            return redirect('/')
+            print request.session['logged_in']
+    except:
+        request.session['logged_in'] == False
+    
     else:
-        user_query = "SELECT messages.id, messages.message, messages.created_at, users.first_name, users.last_name FROM messages JOIN users ON messages.user_id = users.id"
-        messages = mysql.query_db(user_query)
-        
+        users = User.objects.all()
         messages = Message.objects.all()
         comments = Comment.objects.all()
-        users = User.objects.all()
+        current_user = User.objects.get(email=request.session['logged_in'])
+        locale = to_locale(get_language())
 
         context = {
             'all_messages': messages,
-            'all_comments': comments,
-            'all_users': users
+            "current_user": current_user,
+            'locale': locale
         }
         return render(request, 'first_app/wall.html', context)
+
+
