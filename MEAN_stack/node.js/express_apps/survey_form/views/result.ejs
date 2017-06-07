@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>results - survey form Express version</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+    *{
+      font-family: sans-serif;
+      background: lightgray;
+      font-size: 1.2em;
+    }
+    </style>
+  </head>
+   <body>
+    <h1>Here is all the data from your survey!</h1>
+    <p><b>name:</b> <%= data.name %></p>
+    <p><b>location:</b> <%= data.location %></p>
+    <p><b>language:</b> <%= data.language %></p>
+    <p><b>comment:</b> <%= data.comment %></p>
+    
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>dojo survery MEAN</title>
+</head>
+<style>
+*{
+    font-family: sans-serif;
+    background: lightgray
+}
+</style>
+<body>
+    <h1>dojo survey Express edition!!!</h1>
+    <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+    <form action='/result' method='post'>
+
+        Your Name: <input type='text' name='name'><br> 
+        Dojo Location: <select name="location">
+                            <option value="chicago">chicago</option>
+                            <option value="san jose">san jose</option>
+                            <option value="dc">dc</option>
+                            <option value="seattle">seattle</option>
+                        </select><br> 
+        favorite Language: <select name="language">
+                            <option value="python">python</option>
+                            <option value="javascript">javascript</option>
+                            <option value="ruby">ruby</option>
+                        </select><br> 
+        comment: (optional)<br><textarea rows="4" cols="50" name="comment"></textarea><br>
+        
+        <input type='submit' value='submit'><br>
+    </form>
+</body>
+
+</html>
