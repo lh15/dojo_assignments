@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Book</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'first_app/css/style.css' %}"media="screen" title="no title"  charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+    <a href="/">Home</a><br>
+    <a href="/log_out">log off</a>
+    <form action="/process_book" method="POST">
+            {% csrf_token %}
+            <h2>Add a new book and a review:</h2>
+            <label><b>Book Title:</b></label>
+            <input type="text" name="title" placeholder="Book Title" required><br>
+            <label><b>Author:</b></label><br>
+            <b>Choose from the list:</b>
+            <select name="author">
+                <option value="" disabled="disabled" selected="selected">choose an author</option>
+                {% for author in authors %}
+                    <option value="{{author.name}}">{{author.name}}</option>
+                {% endfor %}
+            </select><br>
+        
+            <label><b>Or choose a new author:</b></label>
+            <input type="text" name="new_author" placeholder="New Author"><br>
+            <label><b>Review:</b></label><br>
+            <textarea name="review" style="width: 40%; height: 100px;" required></textarea><br>
+            <label><b>Rating:</b></label><br>            
+            <select name="rating" required>
+                <option value="" disabled="disabled" selected="selected">How many stars?</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            <button type="submit" class="signupbtn">Add book and review</button>
+        </form>
+    </body>
+</html>

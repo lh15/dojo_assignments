@@ -63,10 +63,10 @@
             {% endfor %}
     {% endif %}
     <div class="container">
+        <h1>Welcome to the Dojo message wall</h1>
+            <hr>
         <form action="{%url 'first_app:process_message' %}" method="POST">
             {% csrf_token %}
-            <h1>Welcome to the Dojo message wall</h1>
-            <hr>
             <p>Post a message</p>
             <textarea name="message" style="width: 80%; height: 200px;" required></textarea><br>
             <button type="submit" class="signupbtn">Post Message</button>

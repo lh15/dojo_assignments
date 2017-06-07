@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DISPLAY BOOK</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'first_app/css/style.css' %}"media="screen" title="no title"  charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+    
+        <div class="container">
+            <a href="/">Home</a><br>
+            <a href="/log_out">log off</a>
+             <h2>{{book.title}}</h2>
+    <h3>Author: {{book.author.name}}</h3>
+    <br>
+    <h2>Add to my favorites:</h2>
+    <form action="{%url 'first_app:add_fav' id=book.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="delete">add</button>
+    </form>
+    <h2>Reviews:</h2>
+    <br>
+    
+    {% for review in book.reviews.all %}
+    <hr>
+    <br>
+    
+         <h3>Rating: {% for i in "x"|rjust:review.rating %}</h3> 
+         <img id="star" src="{% static 'first_app/images/star.png' %}" alt="star"> {% endfor %}</p>
+         <p><a href="{%url 'first_app:display_user' id=review.user.id %}">{{review.user.first_name}}</a> says: {{review.review}} </p>
+         {% if review.user.id == current_user.id %}
+         <form action="{%url 'first_app:delete_review' id=review.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="delete">Delete Review</button>
+         </form>
+         {% endif %}
+         <p>Posted on {{review.created_at}} (and it's displayed in your local time!!! :))</p>
+         <br> 
+    {% endfor %}
+       
+    <hr>
+    
+    <form action="{%url 'first_app:process_review' id=book.id %}" method="POST">
+            {% csrf_token %}
+            <p>Write a review</p>
+            <label><b>Review:</b></label><br>
+            <textarea name="review" style="width: 40%; height: 100px;" required></textarea><br>
+            <label><b>Rating:</b></label><br>            
+            <select name="rating" required>
+                <option value="" disabled="disabled" selected="selected">How many stars?</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            <button type="submit" class="signupbtn">Add review</button>
+    </form>
+        </div>
+   
+           {% load tz_detect %}
+{% tz_detect %}
+    </body>
+</html>

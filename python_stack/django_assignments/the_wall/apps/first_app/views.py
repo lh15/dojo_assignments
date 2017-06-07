@@ -4,10 +4,7 @@ from django.core.urlresolvers import reverse
 import re
 import datetime
 import pytz
-from tzlocal import get_localzone 
-from django.utils.translation import to_locale, get_language
-import os, binascii
-import md5 
+
 from .models import User, Message, Comment
 
 from django.utils import timezone
@@ -118,12 +115,11 @@ def wall(request):
         messages = Message.objects.all()
         comments = Comment.objects.all()
         current_user = User.objects.get(email=request.session['logged_in'])
-        locale = to_locale(get_language())
+
 
         context = {
             'all_messages': messages,
-            "current_user": current_user,
-            'locale': locale
+            "current_user": current_user
         }
         return render(request, 'first_app/wall.html', context)
 

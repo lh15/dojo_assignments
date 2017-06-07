@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DISPLAY user</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'first_app/css/style.css' %}"media="screen" title="no title"  charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <a href="/">Home</a><br>
+        <a href="/log_out">log off</a>
+        <h2>Alias: {{user.alias}}</h2>        
+        <h2>Name: {{user.first_name}} {{user.last_name}}</h2>
+        <h2>Email: {{user.email}}</h2>
+        <h2>Total Reviews: {{user.reviews.count}}</h2>
+        <br>
+        {% for review in user.reviews.all %}
+        
+            <a href="{%url 'first_app:display_book' id=review.book.id %}"><h2>review: {{ forloop.counter }} <br> Book: {{review.book.title}}</h2></a>
+        {% endfor %}
+        <br>
+        <hr>
+        <br>
+        <h2>Favorite Books: {{user.books.count}}</h2>
+        <br>
+          {% for book in user.books.all %}
+            <a href="{%url 'first_app:display_book' id=book.id %}"><h2>Book: {{book.title}}</h2></a>
+        {% endfor %}
+        </div>
+        
+   
+    
+    </body>
+</html>

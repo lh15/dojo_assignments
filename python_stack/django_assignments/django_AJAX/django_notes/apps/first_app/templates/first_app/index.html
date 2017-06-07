@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>django notes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to django notes with AJAX!</h1>
+    <h2>Post a new note</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <textarea name="note"></textarea><br>
+        <button type="submit" class="pots">Post Note</button>
+    </form>
+    <div class="notes">
+        {% for note in notes %}
+        <div class="note">
+            <p><b>Note {{ forloop.counter }}:</b> {{note.note}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+<script>
+    // You could also put this code in another JavaScript file... Remember to use $(document).ready() if the script tag is included before the DOM nodes you care about...
+    $('form').submit(function (e) {
+        e.preventDefault()
+        $.ajax({
+            url: '/process_note',
+            method: 'post',
+            data: $(this).serialize(),
+            success: function (serverResponse) {
+                // Replace the html inside a div with the class "posts" with the server response
+                console.log("Received this from server: ", serverResponse)
+                $('.notes').html(serverResponse)
+            }
+        })
+        $(this).trigger('reset')
+    })
+</script>
+
+</html>
