@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("reached doc ready")
+            // this triggers the connection event in our server!
+            var socket = io.connect();
+            // we'll write all the socket stuff after the above line!
+            socket.on('updated_message', function (data) {
+                $( "#updated_message" ).html("You emitted the following information to the server: { name:"  + data.response.name + ", location:"  + data.response.location + ", language:"  + data.response.language + ", comment:"  + data.response.comment + " } ");
+                console.log('The server says: ' + data.response);
+            });
+            socket.on('random_number', function (data) {
+                $( "#random_number" ).html("Your lucky number emitted by the server is " + data.response );
+            });
+            
+            $('form').submit(function (e) {
+                console.log("reached")
+                e.preventDefault();
+                socket.emit('posting_form', {
+                    name: $('#name').val(),
+                    location: $('#location').val(),
+                    language: $('#language').val(),
+                    comment: $('#comment').val()
+                });
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <!-- web page goes here -->
+    <h1>dojo survey Sockets edition!!!</h1>
+    <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+    <div id="updated_message"></div><br>
+    <div id="random_number"></div><br>
+    <form method="post">
+
+        Your Name: <input id="name" type='text' name='name'><br> Dojo Location: <select id="location" name="location">
+                            <option value="chicago">chicago</option>
+                            <option value="san jose">san jose</option>
+                            <option value="dc">dc</option>
+                            <option value="seattle">seattle</option>
+                        </select><br> favorite Language: <select id="language" name="language">
+                            <option value="python">python</option>
+                            <option value="javascript">javascript</option>
+                            <option value="ruby">ruby</option>
+                        </select><br> comment: (optional)<br><textarea rows="4" cols="50" id="comment" name="comment"></textarea><br>
+
+        <input type='submit' value='submit'><br>
+    </form>
+</body>
+
+</html>
