@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+add from to add names to the api
+<!--<form action='/new' method='post'>
+    Name: <input type='text' name='name'> Email: <input type='text' name='email'>
+    <input type='submit' value='add name'>
+</form>-->
+
+<script>
+    $(document).ready(function () {
+        console.log("ready!");
+        $.get("http://localhost:8000/", function (data) {
+             $("body").append("<h1>Names received from 1955 API</h1>");
+            for (var i = 0; i < data.persons.length; i++) {
+                $("body").append("<p>" + data.persons[i].name + "</p>");
+            }
+            console.log(data);
+        });
+    });
+
+</script>
+
+</html>
