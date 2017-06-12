@@ -1,0 +1,28 @@
+1. Set up folders
+  - server
+    - config
+    - controller
+  - client
+    - static 
+    - views
+
+2. Set up routes in config folder
+  - export routes
+  - require from app.js
+
+3. Set up controllers in config folder
+  - require controller in routes.js
+  - export object in controller
+
+4. Create mongoose.js file in config folder
+  - change DB name
+  - require mongoose.js configuration in app.js
+
+5. Move schemas to separate model files
+  - require mongoose in each model file.
+  - require mongoose in controllers.
+  - initialize models in controllers.
+
+6. Change paths in app.js for static and views
+
+
