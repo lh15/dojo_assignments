@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <h1>Tiger (mongoose) Dashboard!</h1>
+  <a href="/tigers/new">Create new tiger</a>
+  <!-- Display all dogs -->
+  <% for (idx in tigers) { %>
+    <p>Name: <a href="/tigers/<%= tigers[idx]._id %>"><%= tigers[idx].name %></a>
+      <a href="/tigers/<%= tigers[idx]._id %>/edit/">Edit tiger</a>
+      <form action="/tigers/<%= tigers[idx]._id %>/delete/" method='post'>
+        <input type="submit" value="Delete">
+      </form>
+    </p>
+  <% } %>
+</body>
+</html>

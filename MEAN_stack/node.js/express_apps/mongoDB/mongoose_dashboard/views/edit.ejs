@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+</head>
+<body>
+  <h1>Edit #<%= tiger.name %>!</h1>
+  <form action="/tigers/<%= tiger.id %>" method='post'>
+    Name: <input type="text" name="name" value="<%= tiger.name %>">
+    Weight: <input type="text" name="weight" value="<%= tiger.weight %>">
+    Color: <input type="text" name="color" value="<%= tiger.color %>">
+    <input type="submit" value="Edit tiger!">
+  </form>
+  <a href="/">Home</a>
+</body>
+</html>

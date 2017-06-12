@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, './views'));
 // Setting our View Engine set to EJS
 app.set('view engine', 'ejs');
 var mongoose = require('mongoose');
-// This is how we connect to the mongodb database using mongoose -- "basic_mongoose" is the name of
+// This is how we connect to the mongodb database using mongoose -- "quoting_dojo" is the name of
 //   our db in mongodb -- this should match the name of the db you are going to use for your project.
 mongoose.connect('mongodb://localhost/quoting_dojo');
 // Use native promises
@@ -28,7 +28,7 @@ mongoose.model('Quote', QuoteSchema); // We are setting this Schema in our Model
 var Quote = mongoose.model('Quote') // We are retrieving this Schema from our Models, named 'User'
 // Routes
 // Root Request
-// The root route -- we want to get all of the users from the database and then render the index view passing it all of the users
+// The root route 
 app.get('/', function (req, res) {
     res.render('index');
 })
