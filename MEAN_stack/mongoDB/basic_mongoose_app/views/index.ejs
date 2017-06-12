@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Basic Mongoose app</title>
+</head>
+<style>
+    * {
+        font-family: sans-serif;
+        background: lightgray
+    }
+</style>
+
+<body>
+    <h1>first mongoose app</h1>
+    <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+    <form action='/users' method='post'>
+
+        Your Name: <input type='text' name='name'><br> Your Age: <input type='text' name='age'><br>
+        <input type='submit' value='submit'><br>
+    </form>
+
+
+    <p>
+        <!--<%= users %>-->
+    </p>
+    <% for(var i=0; i<users.length; i++) { %>
+        <p>
+            <%= users[i].name %>
+                <%= users[i].age %>
+        </p>
+
+    <% } %>
+</body>
+
+</html>

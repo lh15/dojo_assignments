@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+        font-family: sans-serif;
+        background: lightgray
+    }
+</style>
+</head>
+
+<body>
+    <h1>Here are some awesome quotes!</h1>
+    <% for(var i=0; i<quotes.length; i++) { %>
+        <p>"<%= quotes[i].quote %>"</p>        
+        <p><b><%= quotes[i].name %></b></p>
+
+    <% } %>
+    <a href="/">Add new quote</a>
+</body>
+
+</html>
