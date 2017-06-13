@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <title>Controller and Directives</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='bower_components/angular/angular.js'></script>
+    <style>
+        * {
+            font-family: sans-serif;
+            background: lightcoral;
+            font-size: 1.1em;
+        }
+
+        #model {
+            display: inline-block;
+        }
+
+        #foods {
+            border: 2px solid black;
+            display: inline-block;
+            width: 300px;
+            height: 600px;
+            overflow: auto;
+        }
+
+        #addFood {
+            width: 500px;
+            display: inline-block;
+            vertical-align: top
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="myController" id="myController">
+        <div id="addFood">
+            <input type="text" ng-model='text'>
+            <button ng-click="addFood();">
+        Add Food!
+       </button>
+            <br>
+            <b>Currently Typing:</b>
+            <div id='model' ng-if="text"><span>{{text}}</span></div><br>
+        </div>
+
+        <div id="foods">
+            <input type="text" ng-model="search" placeholder="filter">
+            <ul>
+                <li ng-repeat="item in list | filter:search" >{{item}}</li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        var app = angular.module('app', []);
+        app.controller('myController', ['$scope', function ($scope) {
+            //printController will show the current $scope
+            $scope.list = ["apples", "oranges", "steak", "french fries"];
+            $scope.addFood = function () {
+                if ($scope.text) {
+                    $scope.list.push(this.text);
+                    $scope.text = '';
+                }
+            };
+        }]);
+    </script>
+</body>
+
+</html>
