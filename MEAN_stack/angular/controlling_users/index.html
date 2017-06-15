@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <title>Users Controller</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='bower_components/angular/angular.js'></script>
+    <style>
+        * {
+            font-family: sans-serif;
+            font-size: 1.1em;
+        }
+
+        body {
+            background: lightblue;
+        }
+
+        #model {
+            display: inline-block;
+        }
+
+        #addFood {
+            width: 500px;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        input {
+            background: transparent
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="myController" id="myController">
+        <h2>Users Controller</h2>
+        <div id="addFood">
+            First Name:<input type="text" ng-model='user.first_name'><br> 
+            Last Name:<input type="text" ng-model='user.last_name'><br>            
+            Favorite Language:<input type="text" ng-model='user.fav_lang'><br>
+            <button ng-click="addUser()">Add User</button>
+        </div>
+
+        <table>
+            <tr>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>fav_lang</th>
+                <th>actions</th>
+            </tr>
+            <tr ng-repeat='user in users'>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.fav_lang}}</td>
+                <td><button ng-click='deleteUser(user)'>Delete</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var app = angular.module('app', []);
+        app.controller('myController', ['$scope', function ($scope) {
+            console.log($scope)
+            $scope.users = [{
+                first_name: "Charlie",
+                last_name: "Mead",
+                fav_lang: "JavaScript"
+            },
+            {
+                first_name: "Mike",
+                last_name: "Hannon",
+                fav_lang: "Python"
+            },
+            {
+                first_name: "Sara",
+                last_name: "Wong",
+                fav_lang: "Ruby"
+            }];
+            $scope.addUser = function () {
+                $scope.users.push($scope.user);
+                $scope.user = {};
+                console.log($scope.user);
+                console.log($scope)
+            }
+            $scope.deleteUser = function (userToDelete) {
+                //could use .filter but wanted to try another way
+                $scope.users.map(function (user) {
+                    console.log(user)
+                    if (userToDelete === user) {
+                        var index = $scope.users.indexOf(user);
+                        $scope.users.splice(index, 1);
+                    }
+                })
+            }
+        }]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <title>Customize Users</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='bower_components/angular/angular.js'></script>
+
+</head>
+
+<body>
+    <div id="myController">
+        <h2>Users Controller</h2>
+        <div id="addUsers">
+            First Name:<input type="text" ng-model='user.first_name'><br> 
+            Last Name:<input type="text" ng-model='user.last_name'><br>            
+            Favorite Language:<input type="text" ng-model='user.fav_lang'><br>
+            <button ng-click="addUser()">Add User</button>
+        </div>
+
+        <table>
+            <tr>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>fav_lang</th>
+                <th>actions</th>
+            </tr>
+            <tr ng-repeat='user in users'>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.fav_lang}}</td>
+                <td><button ng-click='deleteUser(user)'>Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

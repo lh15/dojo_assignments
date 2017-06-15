@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <title>first angular routes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script>
+        var app = angular.module('app', ['ngRoute']);
+        app.config(function ($routeProvider) {
+            console.log($routeProvider);
+            $routeProvider.when('/', {
+                templateUrl: 'partials/partial1.html',
+                controller: 'view1Controller'
+            })
+                .when('/partial2', {
+                    templateUrl: 'partials/partial2.html',
+                    controller: 'view2Controller'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
+        });
+        //  build the controllers
+        app.controller('view1Controller', function ($scope) {
+            $scope.sports = ['golf', 'basketball', 'hockey', 'tennis', 'football'];
+        });
+        app.controller('view2Controller', function ($scope) {
+            $scope.message = 'We are using another controller';
+        });
+    </script>
+</head>
+
+<body>
+    <div ng-view=''>
+        <!--load partials here-->
+    </div>
+    <h1>hello world</h1>
+    <a href="#!/">Partial 1</a>
+    <a href="#!/partial2">Partial 2</a>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+- always remember to defrentiate between passing a function and calling the function
+- in the case of products, the controller takes in $scope.product from the form and send it to the factory to update it into the factory products "database" which then calls the callback sent from the controller passing in the updated products which is then set into $scope.products in the controller.

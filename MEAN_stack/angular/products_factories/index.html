@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <title>Products with factories</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='bower_components/angular/angular.js'></script>
+    <style>
+        * {
+            font-family: sans-serif;
+            font-size: 1.1em;
+        }
+
+        body {
+            background: lightcyan;
+        }
+
+        #model {
+            display: inline-block;
+        }
+
+        #addProducts {
+            width: 500px;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        input {
+            background: transparent
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="myController" id="myController">
+        <h2>Products Controller</h2>
+        <div id="addProducts">
+            Product Name:<input type="text" ng-model='product.name'><br> Product Price:<input type="number" ng-model='product.price'><br>
+            <button ng-click="addProduct()">Add Product</button>
+        </div>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+            <tr ng-repeat='product in products'>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><button ng-click='deleteProduct(product)'>Delete Product</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var app = angular.module('app', []);
+
+        app.factory('productFactory', function () {
+            var products = [{
+                name: "iphone",
+                price: 649,
+            }];
+            var factory = {};
+            factory.index = function (callback) {
+                console.log("reached index in factory");
+                callback(products);
+            }
+
+            factory.addProduct = function (product, callback) {
+                console.log("reached addProduct in factory");
+                console.log("product param: " + product);
+                console.log("callback param: " + callback);
+                products.push(product);
+                callback(products);
+            }
+            factory.deleteProduct = function (productToDelete, callback) {
+                console.log("reached deleteProduct in factory");
+                console.log("productToDelete param: " + productToDelete);
+                console.log("callback param: " + callback);
+                products.splice(productToDelete, 1);
+                callback(products);
+            }
+
+            return factory;
+        });
+
+        app.controller('myController', ['$scope', 'productFactory', function ($scope, productFactory) {
+            console.log("scope:")
+            console.log($scope)
+            console.log("productFactory: " + productFactory)
+            console.log(productFactory)
+            $scope.product = {};
+            console.log("scope.product: " + $scope.product)
+            console.log($scope.product)
+            $scope.products = [];
+            console.log("scope.products: " + $scope.products)            
+            console.log($scope.products)            
+
+            function setProducts(data) {
+                console.log("reached setProducts/which is a named callback in controller");
+                $scope.products = data;
+                $scope.product = {};
+            }
+            $scope.index = function () {
+                console.log("reached $scope.index in controller");                
+                productFactory.index(setProducts);
+            }
+
+            $scope.index();
+            $scope.addProduct = function () {
+                productFactory.addProduct($scope.product, setProducts);
+            }
+            $scope.deleteProduct = function (productToDelete) {
+                productFactory.deleteProduct(productToDelete, setProducts);
+            }
+
+        }]);
+    </script>
+</body>
+
+</html>
