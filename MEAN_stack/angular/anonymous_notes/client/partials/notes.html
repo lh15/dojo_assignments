@@ -1,0 +1,10 @@
+<form ng-submit="createNote()">
+    <p>Note: <br><textarea ng-model='note.note'></textarea><br>
+        <input type="submit" value="Post Note">
+</form>
+<!--deal with error-->
+<div id="note" ng-repeat="note in notes | orderBy: 'created_at':true">
+    <p>Noted on: <span>{{note.updatedAt | date:'medium'}}</span></p>
+    
+    <h3>"{{note.note}}"</h3>
+</div>

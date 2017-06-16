@@ -2,27 +2,33 @@
 
 <head>
 	<title>The Dojo Message Board Angularized</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 	<script src="angular/angular.js"></script>
 	<script src="angular-route/angular-route.js"></script>
 	<script src='main.js'></script>
-	<script src='factories/messagesFactory.js'></script>
-	<script src='controllers/messagesController.js'></script>
+	<script src='factories/notesFactory.js'></script>
+	<script src='controllers/notesController.js'></script>
 	<link href="./static/css/style.css" rel="stylesheet">
 	<script type="text/javascript"></script>
 	<style>
 		body {
 			text-align: center;
-			background: lightsalmon
+			background: lightgoldenrodyellow;
+            font-family: 'Pangolin', cursive;
 		}
+        #header{
+            border: 4px solid lightseagreen;
+            display: inline-block;
+            padding: 20px
+        }
 	#container{
 		width: 80%;
+        height: 100%;
 		margin: 20px auto;
 		border: 4px solid lightcoral;
 	}
-	#message{
+	#note{
 		width: 40vw;
 		margin: 20px auto;
 		border: 3px solid lightgray;
@@ -33,7 +39,7 @@
 
 <body>
 	<div id="container">
-		<h1>The Dojo Message Board Angularized</h1>
+		<h1 id="header">Anonymous Notes</h1>
 		<div ng-view=''>
 			<!--partials will load here-->
 		</div>

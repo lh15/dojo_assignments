@@ -3,13 +3,9 @@ var myApp = angular.module('myApp', ['ngRoute']);
 // -------------------------- Client Routes -----------------------------
 myApp.config(function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'partials/messages.html',
-        controller: 'messagesController'
+        templateUrl: 'partials/notes.html',
+        controller: 'notesController'
     })
-        .when('/messages', {
-            templateUrl: 'partials/players.html',
-            controller: 'messagesController'
-        })
         .otherwise({
             redirectTo: '/'
         });
