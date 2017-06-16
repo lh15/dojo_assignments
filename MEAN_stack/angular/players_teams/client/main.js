@@ -3,7 +3,7 @@ var app = angular.module('app', ['ngRoute']);
 app.config(function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'partials/players.html',
-        controller: 'playersController'
+        controller: 'playerController'
     })
         .when('/players', {
             templateUrl: 'partials/players.html',
@@ -17,6 +17,11 @@ app.config(function ($routeProvider) {
             templateUrl: 'partials/associations.html',
             controller: 'associationController'
         })
+        // continue of config
+        .when('/:teamname', {
+            templateUrl: 'partials/team.html',
+            controller: 'AteamController'
+        })
         .otherwise({
             redirectTo: '/'
         });
@@ -29,7 +34,7 @@ app.factory('playerFactory', function () {
             name: "kris bryant", team: "cubs"
         }, {
             name: "michael jordan", team: "bulls"
-        },{
+        }, {
             name: "leibel ", team: null
         }];
     var factory = {};
@@ -158,3 +163,25 @@ app.controller('associationController', ['$scope', 'teamFactory', 'playerFactory
     }
 
 }]);
+app.controller('AteamController', function ($scope,teamFactory, playerFactory, $routeParams) {
+    $scope.player = {};
+    $scope.players = [];
+
+    $scope.teamName = $routeParams.teamname;
+    
+    function isOnTeam(player) {
+        return player.team === $routeParams.teamname;
+    }
+
+    function setPlayers(data) {
+        $scope.players = data.filter(isOnTeam);
+        $scope.player = {};
+    }
+
+    $scope.index = function () {
+        console.log("reached scope.index");
+        playerFactory.index(setPlayers);
+    }
+    $scope.index();
+    console.log($routeParams)
+})

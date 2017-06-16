@@ -1,0 +1,16 @@
+<div id="myController">
+    <h2>{{teamName}}</h2>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>players</th>
+        </tr>
+        <tr ng-repeat='player in players'>
+            <div ng-if="player.team  == teamName">
+                <td>{{player.team}}</td>
+                <td>{{player.name}}</td>
+            </div>
+
+        </tr>
+    </table>
+</div>
