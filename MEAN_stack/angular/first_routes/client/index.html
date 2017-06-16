@@ -24,7 +24,8 @@
                 });
         });
         //  build the controllers
-        app.controller('view1Controller', function ($scope) {
+        app.controller('view1Controller', function ($scope, $location) {
+            console.log($location)
             $scope.sports = ['golf', 'basketball', 'hockey', 'tennis', 'football'];
         });
         app.controller('view2Controller', function ($scope) {

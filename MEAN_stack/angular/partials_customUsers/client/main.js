@@ -48,7 +48,7 @@ app.factory('userFactory', function () {
     return factory;
 });
 //  build the controllers
-app.controller('customizeUsersController', ['$scope', 'userFactory', function ($scope, userFactory) {
+app.controller('customizeUsersController', ['$scope', 'userFactory', '$location', function ($scope, userFactory, $location) {
     console.log("reached controller");
     $scope.user = {};
     $scope.users = [];
@@ -64,12 +64,14 @@ app.controller('customizeUsersController', ['$scope', 'userFactory', function ($
     $scope.index();
     $scope.addUser = function () {
         userFactory.addUser($scope.user, setUsers);
+        console.log($location)
+        $location.url('/list');
     }
     $scope.deleteUser = function (userToDelete) {
         userFactory.deleteUser(userToDelete, setUsers);
     }
 }]);
-app.controller('userListController', ['$scope', 'userFactory', function ($scope, userFactory) {
+app.controller('userListController', ['$scope', 'userFactory', '$location', function ($scope, userFactory, $location) {
     function setUsers(data) {
         $scope.users = data;
         $scope.user = {};

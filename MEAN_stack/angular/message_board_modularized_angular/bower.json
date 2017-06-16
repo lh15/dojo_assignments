@@ -1,0 +1,21 @@
+{
+  "name": "message_board",
+  "description": "message board app",
+  "main": "index.js",
+  "authors": [
+    "leibel"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lh15/dojo_assignments",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}
