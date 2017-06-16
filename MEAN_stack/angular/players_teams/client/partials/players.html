@@ -1,8 +1,11 @@
 <div id="myController">
     <h2>Players</h2>
     <div id="players">
-        Name:<input type="text" ng-model='player.name'><br>
-        <button ng-click="addPlayer()">Add Player</button>
+        <form ng-submit="addPlayer()">
+            Name:<input type="text" ng-model='player.name' minlength="4" required><br>
+            <input type="submit" name="" value="Add Player">
+        </form>
+
     </div>
 
     <table>

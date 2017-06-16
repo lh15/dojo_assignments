@@ -1,5 +1,5 @@
 console.log("reached script");
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app',  ['ngRoute', 'ngMessages']);
 app.config(function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'partials/players.html',
@@ -102,6 +102,7 @@ app.controller('playerController', ['$scope', 'playerFactory', function ($scope,
     }
     $scope.index();
     $scope.addPlayer = function () {
+        
         playerFactory.addPlayer($scope.player, setPlayers);
     }
     $scope.deletePlayer = function (playerToDelete) {
