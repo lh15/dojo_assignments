@@ -1,0 +1,38 @@
+<div class="partial">
+    <a ng-class="{selected: game === 1}" href="#!/status/game/1">Game 1</a>
+    <a ng-class="{selected: game === 2}" href="#!/status/game/2">Game 2</a>
+    <a ng-class="{selected: game === 3}" href="#!/status/game/3">Game 3</a>
+    <h1>status game {{game}}</h1>
+    
+    <table>
+        <tr>
+            <th>Player name</th>
+            <th>Player status</th>
+        </tr>
+        <tr ng-repeat='player in players' ng-if="game === 1">
+            <td>{{player.name}}</td>
+            <td>
+                <button class="not_playing" ng-class="{selected: player.game_1.status === 'Not Playing'}" ng-click='updatePlayer(player._id, "Not Playing", game)'>Not Playing</button>
+                <button class="playing" ng-class="{selected: player.game_1.status === 'Playing'}" ng-click='updatePlayer(player._id, "Playing", game)'>Playing</button>
+                <button class="undecided" ng-class="{selected: player.game_1.status === 'Undecided'}" ng-click='updatePlayer(player._id, "Undecided", game)'>Undecided</button>
+            </td>
+        </tr>
+        <tr ng-repeat='player in players' ng-if="game === 2">
+            <td>{{player.name}}</td>
+            <td>
+                <button class="not_playing" ng-class="{selected: player.game_2.status === 'Not Playing'}" ng-click='updatePlayer(player._id, "Not Playing", game)'>Not Playing</button>
+                <button class="playing" ng-class="{selected: player.game_2.status === 'Playing'}" ng-click='updatePlayer(player._id, "Playing", game)'>Playing</button>
+                <button class="undecided" ng-class="{selected: player.game_2.status === 'Undecided'}" ng-click='updatePlayer(player._id, "Undecided", game)'>Undecided</button>
+            </td>
+        </tr>
+        <tr ng-repeat='player in players' ng-if="game === 3">
+            <td>{{player.name}}</td>
+            <td>
+                <button class="not_playing" ng-class="{selected: player.game_3.status === 'Not Playing'}" ng-click='updatePlayer(player._id, "Not Playing", game)'>Not Playing</button>
+                <button class="playing" ng-class="{selected: player.game_3.status === 'Playing'}" ng-click='updatePlayer(player._id, "Playing", game)'>Playing</button>
+                <button class="undecided" ng-class="{selected: player.game_3.status === 'Undecided'}" ng-click='updatePlayer(player._id, "Undecided", game)'>Undecided</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

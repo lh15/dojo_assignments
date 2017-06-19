@@ -1,0 +1,91 @@
+ * {
+     font-family: sans-serif;
+ }
+ a,a:link,a:visited,a:hover,a:focus,a:active{
+    color: inherit;
+    text-decoration: none;
+}
+ body {
+     background: lightgray;
+     color: darkblue;
+     text-align: center;
+ }
+ 
+
+ 
+ #container {
+     width: 80%;
+     margin: 0px auto;
+     text-align: center;
+ }
+ 
+ .partial {
+     margin: 0px auto;
+     text-align: center;
+     background: lightsteelblue;
+     border: 5px solid lightslategray;
+     border-radius: 30px;
+     padding: 30px;
+     margin: 20px;
+ }
+ 
+ #add_player {
+     font-size: 1.5em;
+ }
+ 
+ #add_player input {
+     font-size: 1.1em;
+ }
+ 
+ a {
+     font-size: 150%;
+     border-radius: 10px;
+     padding: 10px;
+ }
+ 
+ a.selected {
+     background: lightslategray;
+     border-radius: 10px;
+     padding: 10px;
+     border: 2px solid darkblue;
+ }
+ 
+ .undecided.selected {
+     background: yellow;
+     color: black
+ }
+ 
+ .playing.selected {
+     background: green;
+     color: white
+ }
+ 
+ .not_playing.selected {
+     background: red;
+     color: white
+ }
+ 
+ button {
+     font-size: 120%
+ }
+ 
+ table {
+     font-family: arial, sans-serif;
+     border-collapse: collapse;
+     margin: 0px auto;
+     font-size: 130%
+ }
+ 
+ td, th {
+     border: 1px solid #dddddd;
+     text-align: left;
+     padding: 8px;
+ }
+ 
+ tr:nth-child(even) {
+     background-color: #dddddd;
+ }
+ 
+ input {
+     background: transparent
+ }

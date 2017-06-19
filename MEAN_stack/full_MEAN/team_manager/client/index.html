@@ -1,0 +1,53 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Team Manager</title>
+	<script src="angular/angular.js"></script>
+	<script src="angular-route/angular-route.js"></script>
+	<script src='main.js'></script>
+	<script src='factories/playersFactory.js'></script>
+	<script src='controllers/playersController.js'></script>
+	<link href="./static/css/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if (window.location.hash.indexOf("players") > 0) {
+				$("#players_link").addClass("selected");
+				$("#status_link").removeClass("selected");
+			}
+			if (window.location.hash.indexOf("status") > 0) {
+				$("#status_link").addClass("selected");
+				$("#players_link").removeClass("selected");
+			}
+			$(document).on("click", "a", function () {
+				if (window.location.hash.indexOf("players") > 0) {
+					$("#players_link").addClass("selected");
+					$("#status_link").removeClass("selected");
+				}
+				if (window.location.hash.indexOf("status") > 0) {
+					$("#status_link").addClass("selected");
+					$("#players_link").removeClass("selected");
+				}
+			});
+		});
+	</script>
+	<style>
+
+	</style>
+</head>
+
+
+<body>
+	<div id="container">
+		<h1>Team Management Dashboard</h1>
+		<a id="players_link" href="#!/players">Manage Players</a>
+		<a id="status_link" href="#!/status">Manage Player Status</a>
+		<div ng-view=''>
+			<!--partials will load here-->
+		</div>
+	</div>
+
+
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+
 myApp.controller('notesController', ['$scope', 'notesFactory', '$location', function ($scope, notesFactory, $location) {
     console.log("reached controller");
     $scope.note = {};

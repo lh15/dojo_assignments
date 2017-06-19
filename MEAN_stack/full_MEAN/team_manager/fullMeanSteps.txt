@@ -1,0 +1,43 @@
+1. Bower init
+2. Bower Install angular and angular-route
+3. Remove app.set views from server
+4. Add bower component to path.join and remove 'client/static' -> 'client'
+5. Changed body-parser to JSON.
+
+6. Change server controller.
+    - res.render -> res.JSON
+    - remove views
+    - change redirects {message: "Success"}
+
+7. Test server routes
+8. Rename server side routes. '/api/message'
+9. Test new routes (restart server)
+
+
+10. Folder set up for angular
+11. In client Folder
+    - Factories
+    - Controllers
+    - Partials
+    - Static -> Assests
+12. Rename index.ejs -> index.html
+13. Move index.html to client. Delete views folder.
+14. Make app.js(main.js) in client.
+
+
+15. Clean index.html
+16. ng app in <html>
+17. script tags for angular, angular-route and app(main.js)
+18. Remove content from <body> put in a partials
+19. In index.html make empty div with ng-view.
+
+
+20. Initialize angular app in app.js(main.js)
+21. Create angular routes.
+
+
+22. Create controller in controllers folder.
+23. Create factory in factories controller.
+
+24. Clean up partials
+

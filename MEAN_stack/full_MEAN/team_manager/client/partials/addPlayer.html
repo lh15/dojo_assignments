@@ -1,0 +1,14 @@
+<div class="partial">
+<a ng-class="{selected: url === '/players/list'}" href="#!/players/list">List</a>
+<a ng-class="{selected: url === '/players/addplayer'}" href="#!/players/addplayer">Add Player</a>
+<h1>add player</h1>
+<form id="add_player" ng-submit="addPlayer()">
+    <label>Player Name: <input type="text" ng-model="player.name" minlength="2" required/></label><br />
+    <label>Preffered Position: <input type="text" ng-model="player.position" /></label><br />
+    <!--<p>{{player}}</p>-->
+    <input type="submit" value="Add" ng-disabled="!player.name"/>
+  </form>
+</div>
+
+
+

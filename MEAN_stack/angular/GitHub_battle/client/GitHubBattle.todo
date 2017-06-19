@@ -1,0 +1,13 @@
+GitHubBattle:
+    Landing Page:
+        ✔ Player 1 and 2 enter username. @done (6/18/2017, 5:51:51 PM)
+        ✔ only allow click if not empty (otherise will return undefined?) @done (6/18/2017, 5:51:53 PM)
+        ✔ Get user calls a controller function which passes the username and user number , factory checks if user exists, if it does it sends back github info. if is a username, controller sets user as ready and if both are ready reveals battle button @done (6/18/2017, 5:53:58 PM)
+        ☐ battle button calls battle function which passes both users info to factory where it gives a score for each and then redirects to resluts where a winner is shown.
+        ☐ username and score should also be save to the database then
+        ☐ rankings should have seperate contoller?
+
+    Results page:
+
+    Rankings Page:
+        

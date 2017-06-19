@@ -1,0 +1,21 @@
+{
+  "name": "team_manager",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Leibelhecht <leibelhecht@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lh15/dojo_assignments",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}

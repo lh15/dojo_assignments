@@ -1,0 +1,33 @@
+<div id="landing">
+    <div id="landing_1">
+        <h2>Player 1</h2>
+        <div ng-hide="p1Ready">
+            <form ng-submit="getPlayers(P1username,1)">
+                <label>GitHub Username:</label>
+                <input type="text" ng-model="P1username"><br>
+                <p ng-if="p1Err">{{p1Err}}</p>
+                <input type="submit" id="getUser" value="Get User" ng-disabled="!P1username">
+            </form>
+        </div>
+        <div ng-show="p1Ready" class="content">
+            <p>{{player1.login}}</p>
+            <img src={{player1.avatar_url}} alt="" class="avatar">
+        </div>
+    </div>
+    <div id="landing_2">
+        <h2>Player 2</h2>
+        <div ng-hide="p2Ready">
+            <form ng-submit="getPlayers(P2username,2)">
+                <label>GitHub Username:</label>
+                <input type="text" ng-model="P2username"><br>
+                <p ng-if="p2Err">{{p2Err}}</p>
+                <input type="submit" id="getUser" value="Get User" ng-disabled="!P2username">
+            </form>
+        </div>
+        <div ng-show="p2Ready" class="content">
+            <p>{{player2.login}}</p>
+            <img src={{player2.avatar_url}} alt="" class="avatar">
+        </div>
+    </div>
+    <button id="battleButton" ng-if="p1Ready && p2Ready" ng-click="battle(player1, player2)"> Battle! </button>
+</div>
