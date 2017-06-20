@@ -1,0 +1,17 @@
+<style>
+    .form .register-form {
+        display: block;
+    }
+</style>
+
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" ng-submit="login()">
+            <input type="text" placeholder="email" ng-model="user.email"/>
+            <input type="password" placeholder="password" ng-model="user.pw"/>
+            <button>login</button>
+            <p class="message">Not registered? <a href="#!/register">Create an account</a></p>
+        </form>
+        <p>User: {{user}}</p>
+    </div>
+</div>

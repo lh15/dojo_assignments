@@ -24,10 +24,13 @@ myApp.controller('playersController', function ($scope, playersFactory, $locatio
         playersFactory.updatePlayer(id, status, gameNum, setPlayers);
         console.log("reached updatePlayer in controller")
     }
-    $scope.deletePlayer = function (id) {
-        console.log(id);
-        playersFactory.deletePlayer(id, setPlayers);
-        console.log("reached deleteplayer in controller")
+    $scope.deletePlayer = function (id, name) {
+        if (confirm("Are you sure you want to delete " + name + " from your database?")) {
+            console.log(id);
+            playersFactory.deletePlayer(id, setPlayers);
+            console.log("reached deleteplayer in controller")
+        }
+
     }
 
 

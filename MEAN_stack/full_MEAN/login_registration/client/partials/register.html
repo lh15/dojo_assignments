@@ -1,0 +1,21 @@
+<style>
+    .form .register-form {
+        display: block;
+    }
+</style>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form" ng-submit="register()">
+            <input type="text" ng-model="user.first_name" placeholder="first name" id="first_name"/>
+            <input type="text" ng-model="user.last_name" placeholder="last name" id="last_name" />
+            <input type="text" ng-model="user.email" placeholder="email address" />
+            <input type="password" ng-model="user.pw" placeholder="password" />
+            <input type="password" ng-model="user.pw_confirm" placeholder="confirm password" />
+            <input type="date" placeholder="Birthday" ng-model="user.bday"  max="{{currentDate | date:'yyyy-MM-dd'}}" required />
+            <button>create</button>
+            <p class="message">Already registered? <a href="#!/login">Sign In</a></p>
+        </form>
+        <p>User: {{user}}</p>
+        <p>Bday formatted: {{user.bday | date: "yyyy-MM-dd"}}</p>
+    </div>
+</div>
