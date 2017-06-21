@@ -70,6 +70,12 @@
         max-width: 300px;
         margin: 0 auto;
     }
+    div[ng-message], .errorMessage{
+        color: lightcoral;
+        font-size: .8em;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
 
 
     body {

@@ -36,7 +36,7 @@ var UserSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 //hash pass before saving
-UserSchema.post('validate', function (next) {
+UserSchema.pre('save', function (next) {
     var user = this;
     // only hash the password if it has been modified (or is new)
     if (!user.isModified('password')) return next();
@@ -44,6 +44,7 @@ UserSchema.post('validate', function (next) {
     bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
         if (err) return next(err);
         // hash the password using our new salt
+        //this uses the bcrypt async version
         bcrypt.hash(user.password, salt, function (err, hash) {
             if (err) return next(err);
             
@@ -54,9 +55,12 @@ UserSchema.post('validate', function (next) {
     });
 });
 //compare passwords
+// cb is an optional callback to be fired once the data has been compared. uses eio making it asynchronous. If cb is not specified, a Promise is returned if Promise support is available.
+// err - First parameter to the callback detailing any errors.
+// isMatch - Second parameter to the callback providing whether the data and encrypted forms match [true | false].
 UserSchema.methods.comparePassword = function (candidatePassword, cb) {
     bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
-        if (err) return cb(err);
+        if (err) {return cb(err)};
         cb(null, isMatch);
     });
 };

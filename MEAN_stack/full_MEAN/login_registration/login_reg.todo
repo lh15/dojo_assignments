@@ -9,10 +9,13 @@ Login and Registration:
         ☐ diff handling for unique errors?
 
     ☐ Front end error handling
-        
+        ☐ ng-messages
+        ☐ custom ng-messages validator for passwords 
         ☐ 
     ☐ set current user
-        ☐ 
+        ☐ check if currentUser exists in cookies
+            ☐ 
+
 
 
     New full MEAN Project Steps:

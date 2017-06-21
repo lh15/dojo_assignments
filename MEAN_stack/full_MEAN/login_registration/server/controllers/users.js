@@ -27,7 +27,7 @@ module.exports = {
             }
             else {
                 console.log("user exists");
-                // test a password
+                // test a password using bcrypts async method
                 user.comparePassword(req.body.pw, function (err, isMatch) {
                     if (err) {
                         console.log(err);

@@ -17,6 +17,8 @@
   "dependencies": {
     "angular": "^1.6.4",
     "angular-route": "^1.6.4",
-    "angular-cookies": "^1.6.4"
+    "angular-cookies": "^1.6.4",
+    "angular-messages": "^1.6.4",
+    "tg-angular-validator": "^1.2.9"
   }
 }
