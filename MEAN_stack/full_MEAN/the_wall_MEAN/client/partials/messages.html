@@ -1,0 +1,24 @@
+<h1>Hey {{currentUser.username}} You are logged in!</h1><br>
+<a href="" ng-click="logOut()">logout</a>
+
+
+<form ng-submit="createMessage()">
+    <p>Message: <br><textarea ng-model='message.message'></textarea><br>
+        <input type="submit" value="Post message">
+</form>
+<!--deal with error-->
+<div id="message" ng-repeat="message in messages">
+    <h3>{{message._author.username}} says:</h3>
+    <h3>{{message.message}}</h3>
+    <form ng-submit="deleteMessage(message._id)"><input type="submit" name="" value="delete message"></form>
+    <div ng-repeat="comment in message._comments">
+        <p>Commented by: {{comment._author.username}}</p>
+        <p>Comment: {{comment.text}}</p>
+        <form ng-submit="deleteComment(comment._id)"><input type="submit" name="" value="delete comment"></form>
+    </div>
+    <p><b>new comment:</b></p>
+    <form ng-submit="createComment(message._id, new_comment)">
+        <p>Comment: </p><textarea ng-model='new_comment.text'></textarea><br>
+        <input type="submit" value="Post comment">
+    </form>
+</div>

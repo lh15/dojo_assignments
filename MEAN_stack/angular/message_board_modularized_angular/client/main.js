@@ -7,7 +7,7 @@ myApp.config(function ($routeProvider) {
         controller: 'messagesController'
     })
         .when('/messages', {
-            templateUrl: 'partials/players.html',
+            templateUrl: 'partials/messages.html',
             controller: 'messagesController'
         })
         .otherwise({
